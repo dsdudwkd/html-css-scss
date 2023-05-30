@@ -1,0 +1,48 @@
+<!DOCTYPE html> <!-- html의 버전을 브라우저에 명시해주는 태그 -->
+<html lang="en"> <!-- 기본 언어 렌더링 종류 ko=한국어 -->
+<head> 
+    <!-- 
+        화면에 실제로 출력되지는 않는 영역이지만 도움을 주는 내용을 표시하는 영역
+        파일 연결, 스타일을 작성하는 영역
+        meta 태그: 문서에 대한 정보(metaData)를 정의하는 태그
+        title: 브라우저 탭에 표시되는 사이트의 제목
+    -->
+    <meta charset="UTF-8"> <!-- -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제목입니다</title>
+
+    <style>
+        div{
+            background-color: coral;
+            width: 500px;
+        }
+        span{
+            background-color: cyan;
+            width:1500px;
+        }
+    </style>
+</head>
+<body>
+    <!--
+        실제로 화면에 출력되는 내용이 들어오는 영역
+    -->
+    <!--
+        모든 태그에는 block요소와 inline 요소 중에 하나를 가지고 생성한다
+        시멘틱 태그: 목적에 맞는 태그를 사용하여 구조화 하는 행동
+
+        block: 가로 사이즈를 모두 차지하며, 옆에 다른 태그들을 정렬하지 않는다. 영역의 크기를 조절할 수 있다(width, height, 여백)
+        inline: 기본적으로 영역을 생성할 수 없다, 컨텐츠(내용)의 영역만큼만 생성(width, height를 생성할 수 없음)
+    -->
+    안녕하세요 저는 도은영입니다.
+    <div>반갑습니다</div> <!-- 여백은 기본적으로 1칸만 적용됨 여러 개 해도 적용x-->
+    <div>div는 block 속성을 가진 가장 기본적인 태그</div>
+    <div>div는 block 속성을 가진 가장 기본적인 태그</div>
+    <div>div는 block 속성을 가진 가장 기본적인 태그</div>
+
+    <span>span태그는 inline속성을 가진 가장 기본적인 태그</span>
+    <span>span태그는 inline속성을 가진 가장 기본적인 태그</span>
+    <span>span태그는 inline속성을 가진 가장 기본적인 태그</span>
+</body>
+</body>
+</html>

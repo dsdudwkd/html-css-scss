@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>여백</title>
+
+    <style>
+        /*
+        
+        여백: 컨텐츠를 기준으로 안 쪽과 바깥 쪽 여백으로 구분하여 작성한다
+
+        바깥 쪽 여백(margin): 주로 컨텐츠와 컨텐츠 사이의 여백을 생성할 때 사용, 영역에 포함되는 값이 아님
+        안 쪽 여백(padding): 주로 컨텐츠 내부에서 여백이 필요할 때 사용, 영역에 여백 값을 추가한다
+
+        padding을 적용했을 때 영역이 커지는 현상
+        1. 영역값을 계산할 때 미리 padding값을 제외 (정확한 사이즈의 계산, 번거로움)
+        2. css를 이용한 방법 
+        -> box-sizing을 이용하는 방법
+            - content-box: 내부에 들어간 컨텐츠만큼만 영역으로 지정(기본값)
+            - border-box: 여백을 컨텐츠에 포함 (padding, border만 해당 / margin은 제외)
+        */
+
+        .box1{
+            width: 300px;
+            height: 300px;
+            background-color: coral;
+            margin-bottom: 50px;
+            padding: 50px;
+            box-sizing: border-box;
+        }
+
+        .box2 {
+            width: 300px;
+            height: 300px;
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1"> 
+        box1
+    </div>
+
+    <div class="box2">
+        box2
+    </div>
+</body>
+</html>

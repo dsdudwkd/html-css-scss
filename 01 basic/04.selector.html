@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>선택자의 종류</title>
+
+    <style>
+        *{
+            font-size: 30px;
+        }
+        div {
+            font-size: 20px;
+        }
+        div, span{
+            font-size: 50px;
+        }
+        p span{
+            font-size: 20px;
+        }
+
+        p > span {
+            font-size: 30px;
+        }
+
+        span.blue{
+            background-color: green;
+        }
+
+        .blue{
+            background-color: blue;
+        }
+
+        #blueColor{
+            background-color: purple;
+        }
+    </style>
+
+    <!--
+        <선택자의 종류>
+        1. * : 페이지 내의 모든 태그들을 지칭
+            페이지에 있는 모든 태그들을 순차적으로 스캔하기 때문에 과부하의 위험을 가지고 있다. 잘 사용x
+
+        2. 태그 선택자: 태그명만 넣어서 선택하는 기본적인 선택자
+        3. 선택자, 선택자: 동시 선택자, 한 번에 여러 개의 선택자에 동일한 값이 들어간 경우 관리가 용이하도록 한 번에 선택하는 방법(동시 선택 갯수는 제한없다)
+        4. 선택자 선택자: 하위 요소 선택자, 앞에 작성된 선택자를 기준으로 내부에 잇는 선택자를 '모두' 지칭(자식, 자손)
+        5. 선택자 > 선택자: 직계 자식 선택자, 앞에 작성된 선택자를 기준으로 바로 아래 있는 선택자만 참조(자식만 참조, 자손x)
+        
+        6. id, class 선택자
+
+        선택자 점수
+        id[100점] > class[10점] > 태그[1점] > * [0점]
+
+        span.blue => 태그+클래스명 = 11점 => 우선순위를 다양하게 줄 수 있게됨
+        
+    -->
+
+</head>
+<body>
+    
+    <div>div태그입니다.</div> <!-- division, 영역을 나타냄-->
+    <div>div태그입니다.</div>
+    <div>div태그입니다.</div>
+
+    <div class="blue">div 태그입니다.</div>
+    <div class="blue">div 태그입니다.</div>
+
+    <span class="blue">span 태그입니다.</span>
+
+    <div id="blueColor" class="blue">div태그입니다.</div>
+
+    <p><!-- paragraph의 약자 문단(텍스트) -->
+        저는
+        <span>
+            span
+            <span>
+                태그입니다.
+            </span>
+        </span>
+    </p> 
+</body>
+</html>
