@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,10 +8,32 @@
     <title>배경 속성</title>
 
     <style>
-        .box{
+        .box {
             width: 1200px;
             height: 1200px;
-            background-color: rgba(0, 0, 0, 0.5);
+
+            /*
+            background-color: rgba(0, 0, 0, 0.5); 
+             */
+            /* background-image: url(./space.jpg);  가로, 세로: 5735px */
+            /* background-image: url(./background.gif);    /*가로, 세로: 500px */
+            /* background-repeat: no-repeat; */
+            /* background-position-y: top; */
+            /* background-position: 33.3333% 66.6666%; x축, y축 */
+            /* background-position: 0px; */
+            /*background-size: auto 100%;  가로는 그대로, 세로만 비율 100%로 늘리기*/
+            /* background-size: contain;  */
+
+
+            background:url(./background.gif) no-repeat center / contain;
+
+            /*
+            <경로의 표시>
+            상대 경로
+            / = 루트
+            ./ = 현재 위치
+            ../ = 현재 위치에서 상위 디렉터리로 이동
+            */
         }
 
         /*
@@ -21,16 +44,49 @@
         <배경 컬러>
         1. 정해진 컬러 프리셋 네임(기본적으로 많이 사용되는 색이 만들어져 있는 값)
         2. #뒤에 6자리 숫자와 알파벳으로 이루어진 헥사코드
-        3. rgb(red, green, blue)값으로 이루어진 값을 넣는 방법
+        3. rgb(red, green, blue)값으로 이루어진 값을 넣는 방법 
         4. rgba(red, green, blue, alpha)값으로 이루어진 값을 넣는 방법
             - alpha는 투명도를 의미하며, 0 ~ 1 사이의 소숫값을 넣는다.
-        */
 
+        <image>
+        1. 배경 이미지는 선택자의 영역만큼만 배경을 설정할 수 있다
+        2. 배경이미지는 컨텐츠의 의미를 담고 있지 않기 때문에 잘려도 상관없는 이미지를 보통 사용하게 된다(의미를 담는 이미지는 img 태그를 사용해야 한다)
+        3. 이미지가 지정한 영역(width와 height)보다 크면 잘려서 나오고, 작으면 영역을 채우기 위해 패턴처럼 반복해서 출력되는 특징이 있다
+
+        <repeat> :배경 이미지 반복 속성
+        - repeat: 반복(기본값)
+        - repeat-x: 가로축만 반복
+        - repeat-y: 세로축만 반복
+        - no-repeat: 반복x
+
+        <position>: 배경 이미지의 위치 속성
+        - 모든 객체(태그 포함)의 기본 위치값(좌측 상단=top:0, left:0)을 기준으로 한다
+        - 위치를 이동시킬 때에는 position 속성으로 이동한다
+        - position의 입력 순서는 x축, y축 순서로 기입하며, 픽셀(px)이나 비율(%)같은 수치로 이동할 수 있다
+        - 특정한 위치값(left, right, top, bottom, center)로도 가능
+        - 하나의 값만 지정되는 경우, 입력되지 않은 값은 0이 아니라 center로 자동 지정
+        - 움직이지 않더라고 값을 지정해주는게 좋다
+
+        <size>: 배경 이미지의 사이즈 속성
+        - 배경이미지는 원본 크기로 돌아오기 때문에 크기를 맞춰줘야 한다
+        - 기본값은 auto(원본 크기를 유지)
+        - 수치 입력: 고유의 사이즈에서 입력된 크기로 변환(첫 번째 값은 width, 두 번째 값은 height)
+        - 값이 하나라면 다른 값은 auto로 비율에 맞춰서 같이 늘어나거나 줄어든다
+        - cover: 이미지를 영역에 꽉 채운다는 전제하에 이미지를 늘린다(영역이 기준이기 때문에 이미지가 잘릴 수 있다)
+        - contain: 이미지 전체를 다 보여준다는 전제하에 이미지를 늘린다(이미지가 기준이기 때문에 영역이 남을 수도 있다)
+
+        그룹 속성
+        background: color img repeat position 순으로 사용을 많이 한다
+        background: color img repeat position / size -> size를 넣을 땐 /를 넣어준다
+        => 순서는 바뀌어도 상관 없으며, 필요한 값만 넣어도 되지만 size가 들어갈 경우 position이 있을 경우에만 그룹 속성에 넣을 수 있다(없을 경우엔 단위 값이 똑같기 때문에 position값으로 인식)
+        */
     </style>
 </head>
+
 <body>
     <div class="box">
         box
     </div>
 </body>
+
 </html>

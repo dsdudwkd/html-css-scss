@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>display 속성</title>
+
+    <style>
+        /*
+        display 속성: 객체들을 보여주는 방식에 대한 속성 
+        - display 속성으로 inline을 block 속성으로 변경할 수는 있지만 본질은 변하지 않는다
+        ex) span에 block 속성을 주면 보여지는건 block으로 보이지만 div와 같은 block 역할을 할 수는 없다(예외 존재)
+        - none: 화면상에서 출력하지 않음(영역까지 관여), 주로 스크립트에서 event속성과 함께 쓰이며, 다시 나오게 하려면 원래 속성을 다시 주면 된다(ex. 처음엔 display:none으로 해놓고 버튼을 누르면 보이게하는 이벤트)
+        - opacity: 투명도만 관여하기 때문에 영역에 대한 정보는 출력됨
+        - inline-block: inline의 정렬 속성과 block의 영역 속성 모두 가지고 있는 혼합형 속성, 주로 컨텐츠를 좌우로 정렬할 때 사용하는 방법 중 하나
+
+        */
+
+        .box{
+            width: 300px;
+            height: 300px;
+            background: coral;
+            display: inline;
+            opacity: 0;
+        }
+        .box2{
+            display: block;
+            width: 300px;
+            height:300px;
+            background: pink;
+        }
+        .box2 .child{
+            width:100px;
+            height:100px;
+            background: coral;
+        }
+        .parent{
+            width: 500px;
+            background: coral;
+            padding: 10px;
+        }
+        .parent .child{
+            width: 100px;
+            height: 50px;
+            background: pink;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">box</div>
+    <span class="box2">
+        <div class="child">child</div>
+    </span>
+
+    <div class="parent">
+        <div class="child">child</div>
+        <div class="child">child</div>
+        <div class="child">child</div>
+    </div>
+</body>
+</html>
