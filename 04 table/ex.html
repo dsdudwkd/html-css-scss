@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>게시판 연습하기</title>
+    <style>
+        /* reset 요소 */
+        body,
+        html,
+        div,
+        p,
+        span,
+        form,
+        input,
+        select,
+        table,
+        tr,
+        caption,
+        td,
+        th {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        table {
+            width: 100%;
+            border-spacing: 0px;
+            border-collapse: collapse;
+            font-size: 0px; /*inline요소의 개행 여백없애는 방법=부모요소에 font-size 0px*/
+        }
+
+        .container {
+            margin: 100px auto;
+            width: 1170px;
+        }
+
+        .title_box {
+            border-bottom: 2px solid black;
+            padding-bottom: 20px;
+            margin-bottom: 64px;
+        }
+
+        .title {
+            font: bold 32px '돋움';
+            margin-bottom: 24px;
+            /* margin이나 padding을 줄 때 한 방향으로 일정하게 주는게 좋다*/
+            /*
+            font의 그룹 속성 쓰는 방법
+            1. font: 굵기(weight) 사이즈(font-size) 글꼴(font-family)
+            2. font: 굵기 사이즈 / 행간(line-height) 글꼴
+            */
+        }
+
+        .text {
+            font-size: 16px;
+        }
+
+        tr {
+            border-bottom: 1px solid #cacaca;
+            height: 96px;
+        }
+
+        th {
+            width: 160px;
+            text-align: left;
+            /*font-weight: 100~900, 보통 홀수 숫자 많이 사용*/
+            font-weight: 300;
+            font-size: 14px;
+        }
+
+        label {
+            width: 100%;
+            display: block;
+        }
+
+        .star {
+            color: #00b0f0;
+            margin-left: 6px;
+            font-weight: bold;
+        }
+
+        .text1 {
+            width: 360px;
+            height: 56px;
+            box-sizing: border-box;
+            padding: 0px 20px;
+        }
+        .th2{
+            padding-left: 130px;
+        }
+        /* type 선택자 */
+        input[type=button]{
+            width: 117px;
+            height: 56px;
+            border: none;
+            background-color: transparent; /* 배경색 투명 */
+            vertical-align: top;
+            margin-left: 8px;
+            /*
+            수직정렬 속성
+            inline과 테이블 셀 속성에만 적용
+            %: 요소를 line-height를 기준으로 이동
+            px: base-line을 기준으로 이동
+
+            정해진 값들은 base-line을 기준으로 정렬
+            sub: 부모 아래 글자 기준으로 정렬
+            super: 부모 위 글자 기준으로 정렬
+            text-top: 요소의 맨 위의 부모를 기준
+            text-bottom: 요소의 맨 아래의 부모를 기준
+            
+            top: 요소의 맨 위를 줄에서 가장 위의 위치에 맞춤
+            bottom: 요소의 맨 아래를 줄에서 가장 낮은 위치에 맞춤
+            middle: 부모의 중앙에 위치
+            */
+        }
+        input.submit_btn{
+            color: #ffffff;
+            background: #001E50;
+            margin-right: 40px;
+        }
+        input.submit_btn2{
+            color: gray;
+            background: #DFE4E8;
+        }
+        .text2{
+            width: 304px;
+            height: 56px;
+            box-sizing: border-box;
+        }
+        .sigungu{
+            margin: 0 48px;
+        }
+        .radio_label{
+            font-size: 14px;
+            display: inline;
+            width: auto;
+            margin: 2px 52px 0px 7px;
+        }
+        input[type=radio]{
+            width: 24px;
+            height: 24px;
+            vertical-align: top;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 큰 틀->세부적인 요소 순으로 만들기 -->
+    <div class="container">
+        <div class="title_box">
+            <p class="title">개인정보 입력</p>
+            <p class="text">일부 전시장에서 만 26세 이상만 운전자 시승이 가능하며,
+                만 26세 이하 고객님께서는 동승석 탑승으로 시승이 제한될 수 있습니다.
+            </p>
+        </div><!-- title_box(영역의 마지막에 구조 파악 용이하게 하기 위해 주석으로 표시해놓기) -->
+
+        <!-- table태그 안에 올 수 있는 태그가 정해져 있으므로 form태그 안에 table태그를 감싸기 -->
+        <form action="" method="post">
+            <table>
+                <tr>
+                    <th>
+                        <label for="name">
+                            신청자 성명
+                            <span class="star">*</span>
+                        </label>
+                    </th>
+                    <td>
+                        <input type="text" id="name" class="text1" placeholder="이름을 입력해주세요." required>
+                    </td>
+                </tr><!-- 신청자 성명 -->
+
+                <tr>
+                    <th>
+                        <label for="use_car">
+                            현재 보유차량
+                        </label>
+                    <td>
+                        <input type="text" id="use_car" class="text1" placeholder="보유 차량을 입력해주세요">
+                    </td>
+
+                    </th>
+                    <th class="th2">
+                        생년월일
+                        <span class="star">*</span>
+                    <td>
+                        <select name="birth" class="text1" style="color: gray;">
+                            <option value="1985">1985</option>
+                            <option value="1986">1986</option>
+                            <option value="1987">1987</option>
+                            <option value="1989">1989</option>
+                            <option value="1990">1990</option>
+                            <option value="1991">1991</option>
+                            <option value="1992">1992</option>
+                            <option value="1993">1993</option>
+                        </select>
+                    </td>
+                    </th>
+                </tr><!-- 생년월일 -->
+
+                <tr>
+                    <th>
+                        <label for="callNumber">
+                            연락처
+                            <span class="star">*</span>
+                        </label>
+                        <td colspan="3">
+                            <input type="text" class="text1" id="callNumber" placeholder="'-'없이 입력해주세요.">
+                            <input type="button" class="submit_btn" value="인증번호 받기">
+
+                            <input type="text" class="text1" placeholder="인증번호 입력.">
+                            <input type="button" class="submit_btn2" value="확인">
+                        </td>
+                    </th>
+                </tr><!--연락처, 인증번호-->
+                <tr>
+                    <th>
+                        전시장 선택
+                        <span class="star">*</span>
+                    </th>
+                    <td colspan="3">
+                        <select class="text2" name="local">
+                            <option value="city">서울특별시</option>
+                            <option value="city">경기도</option>
+                            <option value="city">인천광역시</option>
+                            <option value="city">강원도</option>
+                            <option value="city">충청남도</option>
+                            <option value="city">충청북도</option>
+                            <option value="city">대전광역시</option>
+                            <option value="city">전라남도</option>
+                            <option value="city">전라북도</option>
+                            <option value="city">광주광역시</option>
+                            <option value="city">대구광역시</option>
+                            <option value="city">부산광역시</option>
+                            <option value="city">울산광역시</option>
+                            <option value="city">경상남도</option>
+                            <option value="city">경상북도</option>
+                            <option value="city">제주특별자치도</option>
+                        </select>
+
+                        <select class="text2 sigungu" name="local2 ">
+                            <option value="kangnam">강남</option>
+                            <option value="">서초</option>
+                            <option value="">부평</option>
+                            <option value="">강남</option>
+                            <option value="">강남</option>
+                            <option value="">강남</option>
+                        </select>
+
+                        <select class="text2" name="local3" >
+                            <option value="">구리전시장</option>
+                            <option value="">강남전시장</option>
+                            <option value="">역삼전시장</option>
+                            <option value="">부천전시장</option>
+                        </select>
+                    </td>
+                </tr><!-- 전시장 선택 -->
+
+                <tr>
+                    <th>
+                        <label for="3months">
+                            구매시기
+                            <span class="star">*</span>
+                        </label>
+                        
+                    </th>
+                    <td colspan="3">
+                        <input type="radio" name="buy" id="3months" value="3m">
+                        <label for="3months" class="radio_label">3개월이내</label>
+
+                        <input type="radio" name="buy" id="6months" value="6m">
+                        <label for="6months" class="radio_label">6개월이내</label>
+
+                        <input type="radio" name="buy" id="1year" value="1y">
+                        <label for="1year" class="radio_label">1년 이내</label>
+
+                        <input type="radio" name="buy" id="2years" value="2y">
+                        <label for="2years" class="radio_label">2년 이내</label>
+                        
+                        <input type="radio" name="buy" id="noBuy" value="no">
+                        <label for="noBuy" class="radio_label">계획없음</label>
+                    </td>
+                </tr>
+
+                <tr>
+                    <th>
+                        <label for="want_date">
+                            시승/상담 희망일
+                            <span class="star">*</span>
+                        </label>
+                    </th>
+                    <td>
+                        <input type="text" class="text1" id="want_date" placeholder="날짜를 선택해주세요." required>
+                    </td>
+                </tr>
+            </table>
+
+        </form>
+    </div>
+</body>
+
+</html>
