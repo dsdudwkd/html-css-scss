@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>입력 태그</title>
+
+    <style>
+        textarea{
+            width: 500px;
+            height: 300px;
+            resize: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        입력 태그
+        : 사용자가 입력을 위한 다양한 방식의 입력 폼을 제공하는 태그
+        - 지정된 서버에 입력된 값을 보내거나 받아오는 역할을 한다
+        - 데이터를 전송하거나 받아야 하기 때문에 설정 값이 많다
+
+        form 태그에 들어가는 속성(div나 다른 태그도 가능함)
+        1. action: 실행시킬 주소를 설정, 입력한 값을 서버나 프로그램의 주소로 지정한다, 이 곳으로 데이터를 전송하려면 브라우저 위치를 알아야 하기 때문에 필수 속성
+        2. method: 서버에 전송되는 데이터의 타입
+            - get = 전송되는 데이터의 타입을 암호화하지 않는다, 암호화하지 않기 때문에 보안에 취약, 한 번에 전송되는 데이터의 양이 제한적(쿼리 스트링 방식)
+            - post = 전송되는 데이터의 값을 암호화, 데이터를 별도로 전송하는 방식이기 때문에 한 번에 적용되는 데이터의 양도 많으며 브라우저에서 데이터의 정보 내역을 남기지 않기 때문에 보안성도 get에 비해 월등히 높다
+        
+        form 영역 안에 들어가는 입력 태그들
+        1. input: 다양한 입력 방법을 제공하는 대표적인 입력 태그 (싱글 태그)
+            - type 속성으로 입력 도구의 종류를 변경할 수 있다
+            - type이 없으면 기본값으로 type="text"로 적용한다
+        
+            입력 태그에 들어가는 속성
+            - type = input에만 들어가는 속성으로 입력 도구의 종류를 정한다
+            - value = 값, type의 종류에 따라서 개념이 달라지게 된다
+                * button에서 사용할 때: 내부에 들어가는 텍스트
+                * text에서 사용할 때: 기본 값
+                * checkbox에서 사용할 때: 서버에서 제출되는 값
+            - placeholder: 영역에 대한 힌트
+            - submit =  제출 기능을 가진 버튼
+            - reset = 입력값(내용) 초기화 버튼
+            - number = 문자는 입력되지 않으며, 숫자만 입력 가능, 오른쪽 끝에 스피너 버튼으로 숫자 조절 가능, 직접 입력도 가능
+            - color = 컬러를 지정할 수 있는 colorpicker 위젯 버튼, ie랑 safari 미지원(=지원 범위가 낮다, 사파리는 19년 이후 버전만 적용)
+            - date = 날짜를 지정할 수 있는 캘린더 창 생성, ie는 미지원
+            - email = 일반 text창과 같지만 제출을 눌럿을 때에 이메일 주소의 유효성 검사를 진행, 조건을 만족하지 못하면 제출하지 않고 하단에 에러 표시
+            - checkbox = 중복선택이 가능한 체크박스
+            - radio = 중복 선택이 불가능한 체크박스
+                * name = id와 class와 비슷한 개념으로 입력태그에만 사용할 수 있다, css를 주기 위해 사용하진 않고 스크립트나 서버에서 정보의 값을 식별하기 위한 용도로 사용
+            - hidden = 사용자에겐 보여지지 않는 입력창, 웹 페이지 상에서는 영역 자체가 노출되지 않기 때문에 볼 수 있는 방법도 없다, 사용자가 변경하면 안되는 값들을 제어하거나 데이터를 전송하거나 사용자 눈에 보이지 않는 내용들을 서버에 전달할 때 주로 사용
+            - file = 파일 업로드 버튼
+            - maxlength, minlength = 최대 글자 수, 최소 글자 수 / 최소 글자 수는 유효성 검사를 진행(확인 버튼 눌렀을 때)
+            - required = 필수 입력란으로 변경됨
+            - disabled = 사용자가 값을 입력하지 못하도록 lock을 건다, 그 안에 작성된 값은 서버에 전달되지 않는다
+            - readonly = 사용자가 값을 입력하지 못하도록 lock을 걸지만 disabled와는 다르게 값을 읽거나 전달은 가능
+            - checked = 체크박스 형태에서만 사용 가능, 선택지 중에서 우선적으로 선택되도록 하는 속성
+            - size = input창의 길이 조절 속성, px이나 %와 같은 단위 개념이 아니라 글자 수를 단위로(기본값 20), width처럼 정확한 값을 파악하기 어렵기 때문에 자주 사용x (width와 같이 사용하지 x), 폰트 사이즈로도 달라짐, 
+        
+        2. select: 한 주제에 대한 목록을 표시하는 태그(ul, ol)
+            - option = select에 들어가는 목록 li
+            - selected = 우선적으로 선택되어 보여지게 하는 속성
+
+        3. textarea: input 요소는 기본적으로 한 줄로만 작성이 가능하고 줄바꿈이 되지 않는데 textarea는 여러 줄의 장문을 입력하는 태그
+
+
+     -->    
+
+     <form action="" method="post">
+        <input type="text"><br>
+        <input type="text" value="저는 기본값입니다."><br><!-- input은 싱글 태그, inline, 기본적으로 text를 입력하는 type -->    
+        <input type="password"><br><!-- 암호화 속성 -->
+        <input type="button" value="버튼"><br>
+        <input type="text" placeholder="아이디를 입력하세요.">
+
+        <input type="submit" value="확인">
+        <input type="reset">
+        <br>
+        <input type="number">
+        <br>
+        <input type="color">
+        <br>
+        <input type="date">
+        <br>
+        <input type="email"><input type="submit" value="이메일 확인">
+        <br>
+        체크박스<input type="checkbox">
+        라디오 버튼<input type="radio">
+        남자<input type="radio" name="gender" value="male">
+        여자<input type="radio" name="gender" value="female" checked>
+
+        <input type="hidden">
+        <br>
+        <input type="file">
+        <br>
+        <input type="text" maxlength="12" minlength="4" ><br>
+        <input type="text" required disabled>
+        <input type="text" value="야야야" readonly size="30" >
+
+        <select name="month" id="월">
+            <option value="1월">1월</option>
+            <option value="2월">2월</option>
+            <option value="3월">3월</option>
+            <option value="4월">4월</option>
+            <option value="5월">5월</option>
+            <option value="6월" selected>6월</option>
+            <option value="7월">7월</option>
+            <option value="8월">8월</option>
+            <option value="9월">9월</option>
+            <option value="10월">10월</option>
+            <option value="11월">11월</option>
+            <option value="12월">12월</option>
+        </select>
+
+        <textarea name="" id="" cols="30" rows="10">
+            여러 줄의 장문을 입력하는 태그, 영역 사이즈 자유롭게 설정 가능
+            => 사이즈를 맘대로 바꾸게 되면 UI가 망가지므로 textarea태그에 css를 적용한다(width와 height로 크기 고정, resize:none;으로 사이즈 변경 불가)
+        </textarea>
+     </form>
+
+     <button>
+        버튼태그 입니다 <!-- input의 button과 같은 기능을 하는 버튼, 기능만을 위한 버튼이면 button태그 사용이 좋다 -->
+     </button>
+</body>
+</html>

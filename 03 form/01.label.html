@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    label:hover {
+        cursor: pointer;
+    }
+</style>
+
+<body>
+
+    <!--
+        label 태그: 일반 텍스트와 입력 요소 간의 연결고리를 만들어 하나의 영역으로 인식하는 기법
+        웹 표준과 접근성을 준수하기 위해서 기본적으로 label을 사용하도록 작성하도록 하고 있다
+
+        1. 명시적 작성 방식: 이름을 사용하여 작성, 보통 명시적 작성 방식을 더 많이 사용
+
+        2. 암시적 작성 방식: 이름을 사용하지 않고 작성, 시인성이 떨어지며(안에 내용을 직접 또 확인해야 해서) 오래된 기기나 버전에서는 암시적 작성 방식을 아예 인식하지 못할 수 있음
+    -->
+
+    <form action="" method="post">
+        <!-- 명시적 작성방식 -->
+        <input type="radio" name="gender" value="male" id="male">
+        <label for="male">남자</label>
+
+        <!-- 암시적 작성 방식 -->
+        <label>
+            <input type="radio" name="gender" value="female"> 여자
+        </label>
+    </form>
+</body>
+
+</html>

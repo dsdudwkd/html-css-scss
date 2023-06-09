@@ -1,25 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>링크 속성을 가진 태그</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>링크 속성을 가진 태그</title>
 </head>
 
 <style>
 
 </style>
+
 <body>
-    <img src="./background.gif" alt="검은 하늘에 혼자 부유하는 흰색 우주복을 입은 우주인"> 
-    <span>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid distinctio ab inventore quae. Possimus ex et odio laudantium ducimus reiciendis?
- 
-    </span>
-    <!--
+  <img src="./background.gif" alt="검은 하늘에 혼자 부유하는 흰색 우주복을 입은 우주인" title="우주인 이미지">
+  <span>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid distinctio ab inventore quae. Possimus ex et odio
+    laudantium ducimus reiciendis?
+  </span>
+
+  <a href="https://www.naver.com">연결된 페이지로 이동합니다.</a>
+  <a href="00.blank.html">누르면 이동합니다.</a>
+  <a href="#">임시 링크</a>
+  <a href="#none">사이트의 주소가 없어도 임시 링크로 대체합니다.</a>
+  <a href="https://www.naver.com" title="naver 사이트로 이동하기">자세히 보기</a>
+  <a href="https://www.naver.com" title="naver 사이트로 이동하기">
+    네이버 이동하기2
+  </a>
+
+  <span>
+    <div>에러 예시1</div>
+  </span>
+
+  <a href="#">
+    <div>
+      예외적으로 에러가 나지 않는 a태그
+    </div>
+  </a>
+  <!--
       lorem: 샘플 더미 텍스트, 의미 없는 문장
     -->
-    <!--
+  <!--
         img태그
         - 이미지를 불러오는 목적을 가진 인라인 요소의 태그
         - 이미지 자체를 하나의 문자로 인식하기 때문에 닫는 태그는 존재하지 않는 '싱글 태그'이며, 높이와 상관없이 텍스트 한 줄로 인식
@@ -39,8 +60,24 @@
         - 의미 자체가 없는 장식이 목적인 이미지
         - 다른 곳에서 이미지의 설명이 있는 경우(다른 대체 텍스트가 있는 경우)
         
-        
+        title: 이미지에 마우스 커서를 올렸을 때 나오는 말풍선(주로 이미지의 제목을 넣는다)
+        이미지에 들어가는 title은 선택 속성
+        * title은 선택 속성이지만 alt는 필수 속성(alt를 작성 안했을 때 validation검사 시 에러 뜸)
 
+        a태그: 외부 사이트이 페이지나, 특정 경로에 있는 파일을 연결할 때 사용하는 연결 태그
+        - href: 파일의 경로, 사이트의 주소(필수 속성)
+        - title: 해당 링크에 대한 설명(주로 목적지에 대한 설명), title은 생략하는 경우가 많다(title이 아닌 다른 곳에서 목적지에 대한 설명이 정확하게 있는 경우)
+        - target: 페이지를 열 때 어떤 방식으로 열 것인지 정하는 속성
+        1. _self= 현재 페이지에서 열기(기본값)
+        2. _blank = 새 탭으로 열어서 이동
+        3. _parent = 부모 페이지에서 새 창을 열어서 이동  
+        4. _top = 제일 앞에 있는 페이지에서 이동
+        
+        * a태그는 인라인 속성이지만 예외적으로 내부에 div나 p태그 같은 블록 속성을 이용해서 구조를 생성하는 것이 가능
+
+        
+        
     -->
 </body>
+
 </html>
