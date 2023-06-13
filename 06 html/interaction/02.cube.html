@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .container {
+            width: 300px;
+            height: 300px;
+            position: absolute;
+            top: 50%;
+            left:50%;
+            transform: translate(-50%, -50%);
+            perspective: 500px;
+
+            /*
+            perspective: 원근감 css
+            값이 작으면 가깝게 값이 크면 멀리보는 효과
+            값이 멀어질수록 왜곡되는 값도 커진다
+            적용할 요소의 부모 요소에 넣어준다
+            */
+        }
+        
+        .cube {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            top: 0px;
+            left: 0px;
+            transform-style: preserve-3d;
+            transition: 1000ms;
+            /* transform: rotateX(90deg); */
+            transform: rotate(90deg);
+            /* 
+            transform-style: preserve-3d
+            보여지는 형태의 설정
+            기본값 flat
+            */
+        }
+        .cube div{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            opacity: 0.5;
+            text-align: center;
+            line-height: 300px;
+        }
+        .front{
+            background: coral;
+            transform: translateZ(150px);
+        }
+        .back{
+            background-color: pink;
+            transform: rotateX(180deg) translateZ(150px);
+        }
+        .top{
+            background-color: gold;
+            transform: rotateX(90deg) translateZ(150px); /*transform 속성을 2개 이상 넣을 땐 나열해서 입력하고 순서를 적용하고(rotate를 먼저 적용하는 것이 좋다)*/
+        }
+        .bottom{
+            background-color: violet;
+            transform: rotateX(-90deg) translateZ(150px);
+        }
+        .left{
+            background-color: yellow;
+            transform: rotateY(90deg) translateZ(150px);
+        }
+        .right{
+            background-color: darkslategray;
+            transform: rotateY(-90deg) translateZ(150px);
+        }
+        .cube:hover{
+            /* 단방향으로만 이벤트를 적용할 때 hover에 직접 transition같은 속성 넣을 수 있음 */
+            transform: rotate3d(1, 1, 1, 360deg);
+            /* transform: rotate3d(x축, y축, z축, 45deg); */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="cube">
+            <div class="front">front</div>
+            <div class="back">back</div>
+            <div class="top">top</div>
+            <div class="bottom">bottom</div>
+            <div class="left">left</div>
+            <div class="right">right</div>
+        </div>
+    </div><!-- 3d의 평면이 되어줄 영역 -->
+</body>
+
+</html>
