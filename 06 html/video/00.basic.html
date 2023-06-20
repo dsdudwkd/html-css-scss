@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <video controls muted autoplay loop preload="none" playsinline>
+        <source src="./video/video.mp4">
+    </video>
+    <video src="./video/video.mp4" controls poster="./video/poster.jpg"></video>
+
+    <!-- 
+        브라우저는 3개의 동영상 확장자를 지원한다
+        mp4 모든 브라우저 지원
+        ogv, web: 익스플로어, 사파리 제외
+
+        호환성이 향상됨에 따라 mp4만 있어도 호환성이 문제는 없다
+        avi는 용량 문제로 인해(너무 큼) 웹에서는 사용할 수 없다 
+
+        video 태그
+        비디오 태그는 기본적으로 자동 재생을 지원하지 않는다
+        그 외에 옵션들을 개발자가 커스텀 하는 방식
+
+        비디오 태그에 들어가는 속성
+        - controls: 사용자가 재생 음량, 플레이 타임 등을 확인할 수 있는 컨트롤 창 생성
+        (컨트롤 창은 브라우저의 기본 타입이기 때문에 브라우저마다 UI디자인이 다르게 나온다)
+
+        - muted: 소리가 있는 동영상을 음소거 상태로 재생
+
+        - autoplay: 브라우저 로딩 시 자동 재생
+        브라우저 정책 상 웹 접근성 문제로 인해 소리가 있는 동영상의 경우 음소거를 해야 자동 재생이 가능하다
+
+        - loop: 무한 반복
+        
+        * 자동 무한 반복을 해야 하는 경우: autoplay muted loop 세 가지를 적용해야 한다
+
+        - preload: 웹 페이지 로딩 시 동영상에 대한 정보를 어떻게 로드 시킬건지 정하는 속성
+            - none: 동영상에 대한 정보를 다운받지 않는다. 동영상이 재생되게 되면 그 때 정보를 다운받기 시작
+            - metadata: 정보의 일부분만 다운받고 나머지는 재생 시에 다운받는다
+            - auto: 로딩 시에 모든 정보를 같이 다운 (자동 재생일 때는 무조건 auto로 해야함, 아닐 시엔 none이나 metadata)
+
+        * 자동 재생 시에 preload를 none이나 metadata로 설정한 경우 값이 무시하고 auto로 강제 변환된다.
+        값을 넣지 않을 경우 auto를 기본값으로 한다
+
+        - poster: 재생되기 전 보여지는 썸네일 이미지를 보여준다 (자동 재생 시에는 확인 불가)
+        포스터는 재생이 시작된 이후에는 일시정지나 동영상이 끝나도 나타나지 않는다(최초 1번만 실행)
+        css로 생성한 것도 아니기 때문에 css로 크기를 조절할 수도 없다
+        이미지 크기 조절이 필요하면 이미지 태그로 생성하거나 그래픽 툴로 사이즈를 변경 후에 다시 적용해야 한다 
+
+        - playsinline: 모바일 전용 속성
+        pc나 안드로이드 기반에서는 나타나지 않으나 아이폰/아이패드에서 확인되는 현상 중에 하나로
+        자동 재생 시에 전체화면으로 변환이 되어 자동 재생이 되는 현상을 막아주는 속성
+
+        * 모바일 지원하는 페이지에서는 동영상 자동 재생시에 autoplay muted loop playsinline을 묶어서 사용한다
+     -->
+</body>
+</html>

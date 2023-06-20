@@ -7,7 +7,7 @@
     <title>입력 태그</title>
 
     <style>
-        textarea{
+        .textbox{
             width: 500px;
             height: 300px;
             resize: none;
@@ -44,7 +44,7 @@
             - number = 문자는 입력되지 않으며, 숫자만 입력 가능, 오른쪽 끝에 스피너 버튼으로 숫자 조절 가능, 직접 입력도 가능
             - color = 컬러를 지정할 수 있는 colorpicker 위젯 버튼, ie랑 safari 미지원(=지원 범위가 낮다, 사파리는 19년 이후 버전만 적용)
             - date = 날짜를 지정할 수 있는 캘린더 창 생성, ie는 미지원
-            - email = 일반 text창과 같지만 제출을 눌럿을 때에 이메일 주소의 유효성 검사를 진행, 조건을 만족하지 못하면 제출하지 않고 하단에 에러 표시
+            - email = 일반 text창과 같지만 제출을 눌을 때에 이메일 주소의 유효성 검사를 진행, 조건을 만족하지 못하면 제출하지 않고 하단에 에러 표시
             - checkbox = 중복선택이 가능한 체크박스
             - radio = 중복 선택이 불가능한 체크박스
                 * name = id와 class와 비슷한 개념으로 입력태그에만 사용할 수 있다, css를 주기 위해 사용하진 않고 스크립트나 서버에서 정보의 값을 식별하기 위한 용도로 사용
@@ -94,8 +94,8 @@
         <input type="file">
         <br>
         <input type="text" maxlength="12" minlength="4" ><br>
-        <input type="text" required disabled>
-        <input type="text" value="야야야" readonly size="30" >
+        <input type="text" required disabled><br>
+        <input type="text" value="야야야" readonly size="30" ><br>
 
         <select name="month" id="월">
             <option value="1월">1월</option>
@@ -110,13 +110,16 @@
             <option value="10월">10월</option>
             <option value="11월">11월</option>
             <option value="12월">12월</option>
-        </select>
+        </select><br>
 
-        <textarea name="" id="" cols="30" rows="10">
+        <textarea class="textbox" name="" id="" cols="30" rows="10">
             여러 줄의 장문을 입력하는 태그, 영역 사이즈 자유롭게 설정 가능
             => 사이즈를 맘대로 바꾸게 되면 UI가 망가지므로 textarea태그에 css를 적용한다(width와 height로 크기 고정, resize:none;으로 사이즈 변경 불가)
+        </textarea><br>
+        <textarea class="text1" name="" id="" cols="30" rows="10">
+            dkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk
         </textarea>
-     </form>
+     </form><br>
 
      <button>
         버튼태그 입니다 <!-- input의 button과 같은 기능을 하는 버튼, 기능만을 위한 버튼이면 button태그 사용이 좋다 -->

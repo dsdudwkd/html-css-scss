@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Gasoek+One&family=Kablammo&family=Orbit&display=swap');
+
+        p {
+            font-family: 'Gasoek One', sans-serif;
+        }
+        /* 
+        외부  파일을 연결하는 방식 중에 link 방식과 @import 방식이 있다
+        차이점은 파일을 어떻게 읽느냐의 차이다
+
+        link 방식은 병렬 방식
+        @import 방식은 직렬 방식
+
+        병렬 방식은 한 번에 모든 링크 파일들을 로드하며, 직렬 방식은 한 번에 하나의 파일만 로드한다
+        양이 많아지면 직렬 방식은 시간이 오래 걸려 병렬 방식을 더 선호하는 편
+        (엣지에서 @import 방식을 읽어오지 못하는 버그가 있다)
+        */
+    </style>
+</head>
+
+<body>
+    <p>Lorem ipsum dolor sit amet.</p>
+</body>
+
+</html>

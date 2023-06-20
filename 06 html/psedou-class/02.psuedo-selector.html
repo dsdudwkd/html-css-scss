@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가상 선택자</title>
+
+    <style>
+        /* 
+        가상 선택자
+
+        - 사용자의 행동에 영향을 받는 요소를 생성(이벤트)
+        - 특정한 위치의 순번을 가진 선택자를 찾을 때(selector)를 통틀어서 가상 선택자라고 한다
+        
+        이벤트 요소
+
+        1.a태그에만 들어가는 이벤트 선택자
+        :visited - 방문했던 링크 페이지에 대한 선택자
+        :link - 아직 방문하지 않은 링크 페이지에 대한 선택자
+
+        2. 모든 선택자에 들어가는 이벤트 속성
+        :hover - 마우스 커서가 해당 태그를 선택했을 때 이벤트 발생(마우스 이벤트)
+        :active - 마우스를 클릭하거나 활성화 되고 있는 상태에서 이벤트 발생(클릭 이벤트)
+        :focus - 해당 객체가 focusing 되어 있을 때 활성화된다,
+        포커스는 특정한 행동을 하는 객체(버튼 / 입력 / 기능)과 같은 행동을 발생시키는 태그에만 적용됨(키보드 이벤트)
+        */
+
+        a{
+            color: chocolate;
+        }
+        a:visited{
+            color: black;
+        }
+        a:link{
+            color: darkolivegreen;
+        }
+        p:hover{ /* hands over의 약자*/
+            color: red;
+            font-weight: 600;
+        }
+        p:active{
+            color: blue;
+        }
+        a:focus{
+            background-color: green;
+        }
+        p:focus{
+            background-color:bule;
+        }
+        ul li:nth-child(4){
+            color: lightseagreen;
+        }
+        ul li:nth-child(odd){
+            background-color: pink;
+            /* odd는 홀수만 만족하는 선택자를 찾음 */
+        }
+        ul li:nth-child(even){
+            background-color: lightskyblue;
+            /* even은 짝수만 만족하는 선택자를 찾음 */
+        }
+        ul li:nth-child(4n){
+            background-color: gray;
+            /* 숫자 뒤에 n이 붙게 되면 앞의 숫자를 배수로 하는 선택자를 반복한다
+            ex. 4n = 4, 8, 12,...
+            */
+        }
+        ul li:first-child{
+            background-color: darkkhaki;
+        }
+        ul li:last-child{
+            background-color: honeydew;
+        }
+
+        /* 
+        특정한 순번을 찾응 선택자
+        nth:child(n) : n은 순번을 의미
+        특정 숫자가 아닌 짝수와 홀수로 구분하여 지정할 수도 있다
+        odd: 홀수, even: 짝수
+
+        숫자 뒤에 n이 붙게 되면 숫자의 배수를 선택한다
+
+        nth-child(n)의 가장 큰 특징은 태그와 선택자와 관계없이 부모요소에서 해당하는 순번만 만족
+        nth-of-type(n)은 부모 요소를 기준으로 자식 요소인 선택자 태그 중에서만 순번을 찾는다.(type과 순번 모두 만족)
+        */
+
+        p:nth-child(2){
+            background-color: orange;
+        }
+        p:nth-of-type(2){
+            background-color: purple;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        내가 방문한 사이트의 기록이 남아있으면 보라색으로 바뀌어있음(쿠키가 남아있어서)
+     -->
+    <a href="https://www.naver.com/">여기를 클릭하세요.</a>
+    <p>Lorem ipsum dolor sit amet consectetur.</p>
+    <a href="https://www.nate.com/">여기를 클릭하세요.</a>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <ul>
+        <li>item1</li>
+        <li>item2</li>
+        <li>item3</li>
+        <li>item4</li>
+        <li>item5</li>
+        <li>item6</li>
+        <li>item7</li>
+        <li>item8</li>
+        <li>item9</li>
+        <li>item10</li>
+    </ul>
+    <p>Lorem ipsum dolor sit amet.</p>
+</body>
+</html>
