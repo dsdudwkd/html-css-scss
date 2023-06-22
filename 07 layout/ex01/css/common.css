@@ -24,5 +24,161 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50% -50%);
+    transform: translate(-50%, -50%);
+}
+.h-sns-menu{
+    width: 200px;
+    height: 30px;
+    background-color: pink;
+    position: absolute;
+    left: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.h-menu{
+    width: 240px;
+    height: 30px;
+    background-color: pink;
+    position: absolute;
+    right: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.ad-btn{
+    width: 65px;
+    height: 65px;
+    background-color: pink;
+    position: absolute;
+    right: -80px;
+    top: 0px;
+}
+.gnb{
+    width: 100%;
+    height: 42px;
+    background-color: #0D4633;
+}
+.gnb ul li{
+    width: 20%; /* 1000px/5=200px*/
+    height: 100%;
+    float: left;
+}
+.gnb ul li a{
+    /* 폰트 관련된 속성은 텍스트를 감싸고 있는 직접적인 태그에 주는 것이 좋다 */
+    color: #ffffff;
+    display: block;
+    width: 100%;
+    height: 100%;
+    line-height: 42px; /* 텍스트가 한 줄일 때 높이 값과 같은 값으로 설정하면 수직 가운데 정렬을 할 수 있다*/
+    font-size: 14px; /* 모든 브라우저의 기본 폰트 사이즈는 16px */
+    text-align: center; /* 컨텐츠 좌우 정렬 */
+}
+.container{
+    width: 100%;
+    background-color: #f7f0da;
+}
+.visual-wrapper{
+    width: 100%;
+    height: 460px;
+    background-color: lightgray;
+}
+/* content */
+.container > .inner{
+    padding: 30px 0 80px;
+}
+.banner-wrapper{
+    margin-bottom: 30px;
+}
+.banner-left{
+    width: 390px;
+    float: left;
+}
+.banner-slide{
+    width: 100%;
+    height: 405px;
+    background-color: pink;
+    margin-bottom: 10px;
+}
+.banner-item1{
+    width: 100%;
+    height: 172px;
+    background-color: pink;
+}
+.banner-right{
+    width: 596px;
+    float: right;
+}
+.banner-menu{
+    width: 100%;
+    height: 405px;
+    margin-bottom: 10px;
+    background-color: paleturquoise;
+}
+.banner-item2{
+    width: 100%;
+    height: 172px;
+    background-color: paleturquoise;
+}
+/* franchise */
+.franchise-wrapper{
+    width: 100%;
+    margin-bottom: 30px;
+}
+.local{
+    width: 596px;
+    height: 262px;
+    float: left;
+    background-color: pink;
+}
+.card{
+    width: 390px;
+    height: 262px;
+    background-color: paleturquoise;
+    float: right;
+}
+.board-wrapper{
+    width: 100%;
+}
+.board-wrapper div{
+    height: 132px;
+    background-color: lightgrey;
+    float: left;
+}
+.franchise{
+    width: 294px;
+    height: 132px;
+    margin-right: 7px;
+}
+.recruit{
+    width: 292px;
+    height: 132px;
+    margin-right: 14px;
+}
+.notice{
+    width: 393px;
+    height: 132px;
+}
+/* footer */
+.f-container{
+    width: 100%;
+    border-top: 1px solid gray;
+}
+.f-family{
+    width: 100%;
+    height: 67px;
+    background-color: #f7f0da;
+}
+.f-info{
+    width: 100%;
+    height: 210px;
+    background-color: #222222;
+    color: #ffffff;
+}
+.top-btn{
+    width: 60px;
+    height: 60px;
+    background-color: gray;
+    position: fixed;
+    left: 50%;
+    bottom: 40px;
+    margin-left: 521px;
 }

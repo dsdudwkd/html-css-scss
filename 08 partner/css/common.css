@@ -1,0 +1,158 @@
+body, html{
+    font-family: 'Noto Sans KR', sans-serif;
+}
+.clearfix:after{
+    content: "";
+    display: block;
+    clear: both;
+}
+.inner{
+    width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+/* skip-menu */
+.skip-menu{
+    position: relative;
+    top: 0;
+    left: 0;
+}
+.skip-menu li a{
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* 
+    포커스 이벤트는 영역이 없으면 활서오하되지 않기 때문에
+    display:none이나 width:0 height:0처럼 영역을 영역을 소멸시킬 수 없다
+    최소한의 사이즈 1px씩은 남긴다
+
+    skip 메뉴는 사용자 편의 및 웹 접근성을 위해서는 꼭 필요한 요소이다
+
+    웹 접근성 및 사용자의 입력 도구의 부재로 부득이하게 tap키로 사용해야 하는 경우가 생기는데
+    그에 대한 대체 기능으로 들어간다
+
+    웹 페이지의 내용이 많아서 내가 원하는 컨텐츠를 바로 넘어가야 할 때도 자주 쓰이는 요소
+    */
+    width: 1px;
+    height: 1px;
+    font-size: 0px;
+    line-height: 0px;
+}
+.skip-menu li a:focus{
+    width: 100%;
+    height: 30px;
+    font-size: 20px;
+    line-height: 30px;
+    color: #ffffff;
+    background-color: #333333;
+    text-align: center;
+}
+/* blind */
+.blind{
+    /* 
+    실제로 브라우저 상에 노출되는 텍스트는 아니지만 이미지를 대체하는 대체 텍스트처럼
+    노출되면 안되지만 리더기에서 영역을 알려줘야 할 때 사용하는 방법
+
+    텍스트 숨김 처리 방법(1~4까진 문제점이 생김)
+    1. display:none; -> 영역 자체가 사라져서 리더기에서 읽지 못함
+    2. visibility: hidden; -> 화면에 보이지 않지만 리더기에서 읽지 못함
+    3. text-indent: -9999px -> 처음부터 영역을 만들어놔서 메모리 문제가 생김
+    4. position:absolute, left:-9999px: 위와 같이 메모리 문제
+
+    아래 방법이 최적화된 텍스트 숨김 처리 방법
+    */
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    /* 포토샵의 마스크 기능과 비슷 */
+    clip: rect(1px, 1px, 1px, 1px);
+    overflow: hidden; /* 넘치는 영역을 모두 숨김 */
+    z-index: -1;
+}
+/* header */
+.h-container{
+    width: 100%;
+}
+.h-top{
+    padding: 12px 0;
+    border-bottom: 1px solid gray;
+}
+.h-top-menu{
+    float: right;
+    font-size: 0; /*inline 요소의 개행 여백을 없애기 위해*/
+}
+.h-top-menu a{
+    font-size: 12px;
+    color: #999999;
+    margin-left: 20px;
+}
+/* a태그 첫 번째 요소의 margin 없애기 */
+.h-top-menu a:first-of-type{
+    margin-left: 0;
+}
+.h-bottom{
+    width: 100%;
+    height: 96px;
+}
+.logo{
+    width: 245px;
+    height: 64px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+.logo a{
+    display: block;
+}
+.gnb{
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 70px;
+}
+.gnb ul{
+    height: 100%;
+}
+.gnb ul li{
+    float: left;
+    height: 100%;
+}
+.gnb ul li a{
+    width: 100%;
+    height: 100%;
+    display: block;
+    padding: 0px 25px;
+    line-height: 96px;
+    color: #333333;
+    font-weight: bold;
+}
+.menu-btn{
+    width: 35px;
+    height: 26px;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+}
+.menu-btn i{
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #333333;
+    position: absolute;
+    left: 0;
+    border-radius: 3px;
+}
+.line1{
+    top: 0px;
+}
+.line2{
+    top: 12px;
+}
+.line3{
+    top: 24px;
+}
