@@ -156,3 +156,342 @@ body, html{
 .line3{
     top: 24px;
 }
+/* main */
+.container{
+    padding-bottom: 46px;
+}
+.visual-wrapper{
+    width: 100%;
+    height: 615px;
+    background: url(../images/visual02.jpg) no-repeat center / cover; /*상위폴더에 가서 image폴더를 가야함*/
+    position: relative;
+    top: 0;
+    left: 0;
+}
+.visual-dot-list{
+    position: absolute;
+    left: 50%;
+    bottom: 60px;
+    transform: translateX(-50%);
+}
+.visual-dot-list ul li{
+    width: 14px;
+    height: 14px;
+    border: 1px solid #029BAB;
+    border-radius: 50%;
+    box-sizing: border-box;
+    margin-right: 30px;
+    float: left;
+}
+.visual-dot-list ul li:first-of-type{
+    background-color: #029BAB;
+}
+/* timeline */
+.timeline-wrapper{
+    width: 100%;
+}
+.timeline{
+    width: 100%;
+    height: 110px;
+    background: #029BAB url(../images/timeline.png) no-repeat center top;
+}
+.timeline-list{
+    width: 100%;
+    height: 100%;
+}
+.timeline-list li{
+    width: 100px;
+    height: 100%;
+    text-align: center;
+    float: left;
+}
+.timeline-list li:before{
+    content: "";
+    display: block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    margin: 34px auto 0;
+}
+.timeline-list li.green:before{
+    background-color: #7BDADC;
+}
+.timeline-list li.on:before{
+    background-color: #F0B801;
+}
+.timeline-list li a{
+    font-size: 20px; /*폰트 사이즈 짝수로 하면 깔끔하게 나*/
+    font-weight: bold;
+    display: block;
+    padding-top: 30px;
+    box-sizing: border-box;
+}
+.timeline-list li a:after{
+    content: "";
+    display: block;
+    width: 0px;
+    height: 2px;
+    background-color: #F0B801;
+    margin: 5px auto 0;
+    transition: 0.3s
+}
+.timeline-list li a:hover{
+    color: #F0B801;
+}
+.timeline-list li a:hover:after{
+    width: 100%;
+}
+/* itemeline-item */
+.timeline-item{
+    padding-top: 2px;
+}
+.timeline-item ul{
+    width: 100%;
+    border: 1px solid #dddddd;
+    padding: 16px 20px;
+}
+.timeline-item ul li{
+    float: left;
+    margin-right: 100px;
+}
+.time-date{
+    color: #029BAB;
+    margin-bottom: 12px;
+    font-weight: bold;
+}
+.time-date:before{
+    content: "";
+    display: block;
+    width: 5px;
+    height: 16px;
+    float: left;
+    background-color: #029BAB;
+    margin-right: 10px;
+}
+.time-title{
+    color: #556864;
+    font-weight: bold;
+    font-size: 14px;
+}
+/* curri */
+.curri-wrapper{
+    padding: 60px 0 140px; /*padding에는 auto가 없다*/
+}
+.content-title{
+    text-align: center;
+    font-size: 30px;
+    color: #029BAB;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+.curri-wrapper .inner > div{
+    float: left;
+    position: relative;
+    left: 0;
+    top: 0;
+}
+.curri-item01{
+    width: 588px;
+    height: 640px;
+    background:url(../images/curri01.jpg) no-repeat center center / cover;
+    margin-right: 24px;
+}
+.hover-box{
+    width: 100%;
+    height: 100%;
+    /*opacity로 배경을 흐리게 하면 컨텐츠 내용도 영향을 미쳐 배경만 흐리게 하려면 rgba로 주는게 좋다*/
+    background: rgba(0, 0, 0, 0.5);
+    position: relative;
+    left: 0;
+    top: 0;
+    text-align: center;
+    padding-top: 150px;
+    box-sizing: border-box;
+    transition: 0.5s;
+    opacity: 0;
+}
+.hover-box:after{
+    content: "";
+    display: block;
+    width: 90%;
+    height: 90%;
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    
+}
+.curri-wrapper .inner > div:hover .hover-box{
+    opacity: 1;
+ }
+ .curri-title{
+    font-size:18px;
+    color: #ffffff;
+    margin-bottom: 40px;
+    display: inline-block; /* 내가 가진 컨텐츠 내용의 길이 만큼만 border 라인 생기게끔*/
+    border-bottom: 2px solid #ffffff;
+    padding-bottom: 20px;
+    line-height: 24px; /*행간의 크기는 폰트 사이즈의 1.5~1.7배 정도가 좋다고 한다*/
+ }
+ .curri-text{
+    color: #ffffff;
+    margin-bottom: 50px;
+ }
+ .curri-text span{
+    display: block;
+    width: 230px;
+    height: 24px;
+    background-color: #029BAB;
+    color: #ffffff;
+    font-weight: bold;
+    line-height: 24px;
+    margin: 0 auto 10px;
+ }
+ .link-btn{
+    display: inline-block;
+    padding: 14px 20px;
+    border-radius: 20px;
+    color: #029BAB;
+    background-color: #ffffff;
+    font-size: 12px;
+    font-weight: bold;
+ }
+ .curri-item02{
+    width: 588px;
+    height: 310px;
+    background: url(../images/curri02.jpg) no-repeat center center / cover;
+    margin-bottom: 24px;
+ }
+ .curri-item03{
+    width: 282px;
+    height: 307px;
+    background: url(../images/curri03.jpg) no-repeat center center / cover;
+    margin-right: 24px;
+ }
+ .curri-item04{
+    width: 282px;
+    height: 307px;
+    background: url(../images/curri04.jpg) no-repeat center center / cover;
+ }
+ /* info-wrapper */
+ .info-wrapper{
+    width: 100%;
+    margin-bottom: 140px;
+    background: url(../images/background.png) no-repeat center center;
+    text-align: center;
+ }
+ .info-list{
+    width: 100%;
+    margin-bottom: 50px;
+ }
+ .info-list li{
+    width: 282px;
+    height: 402px;
+    float: left;
+    margin-right: 24px;
+    position: relative;
+    top: 0;
+    left: 0;
+    /* 공통적인 부분 한 번에 넣기 */
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    padding: 40px 0 0 30px;
+    box-sizing: border-box;
+    text-align: left;
+ }
+ .info-list li:after{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    transition: 0.3s;
+ }
+ .info-list li:last-of-type{
+    margin-right: 0;
+ }
+ .info-list li:nth-of-type(odd){
+    margin-top: 34px; 
+    /* transform: translateY(34px); */
+ }
+ /* 글씨가 희미하게 보이는 것을 선명하게 보이게 하려고 안의 내용 z-index로 올리기 */
+ .info-list li > *{
+    position: relative;
+    z-index: 1;
+ }
+ .seoul{
+    background: url(../images/seoul.jpg);
+ }
+ .incheon{
+    background: url(../images/incheon.jpg);
+ }
+ .busan{
+    background: url(../images/busan.jpg);
+ }
+ .jeju{
+    background:url(../images/jeju.jpg);
+ }
+ .info-title{
+    color: #ffffff;
+    margin-bottom: 40px;
+    font-weight: bold;
+    font-size: 20px;
+ }
+ .info-title span{
+    display: block;
+    margin-bottom: 16px;
+    line-height: 24px;
+    font-size: 18px;
+    font-weight: normal;
+ }
+ .link-text{
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 20px;
+    border-bottom: 1px solid #ffffff;
+    display: none;
+ }
+ .info-list li:hover:after{
+    opacity: 1;
+ }
+ .info-list li:hover .link-text{
+    display: inline;
+ }
+ .info-wrapper .link-btn{
+    border: 1px solid #029BAB;
+    padding: 12px 40px;
+ }
+ .book-wrapper{
+    width: 100%;
+    background-color: #029BAB;
+    padding: 24px 0; 
+ }
+ .book-wrapper .content-title{
+    color: #ffffff;
+    position: relative;
+    top: 0;
+    left: 0;
+ }
+ .book-wrapper .content-title:after{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #ffffff;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+ }
+ .book-wrapper .content-title span{
+    padding: 0 30px;
+    background-color: #029BAB;
+    position: relative;
+    z-index: 1;
+ }
