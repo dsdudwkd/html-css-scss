@@ -1,12 +1,15 @@
-body, html{
+body,
+html {
     font-family: 'Noto Sans KR', sans-serif;
 }
-.clearfix:after{
+
+.clearfix:after {
     content: "";
     display: block;
     clear: both;
 }
-.inner{
+
+.inner {
     width: 1200px;
     height: 100%;
     margin: 0 auto;
@@ -14,13 +17,15 @@ body, html{
     top: 0;
     left: 0;
 }
+
 /* skip-menu */
-.skip-menu{
+.skip-menu {
     position: relative;
     top: 0;
     left: 0;
 }
-.skip-menu li a{
+
+.skip-menu li a {
     position: absolute;
     top: 0;
     left: 0;
@@ -41,7 +46,8 @@ body, html{
     font-size: 0px;
     line-height: 0px;
 }
-.skip-menu li a:focus{
+
+.skip-menu li a:focus {
     width: 100%;
     height: 30px;
     font-size: 20px;
@@ -50,8 +56,9 @@ body, html{
     background-color: #333333;
     text-align: center;
 }
+
 /* blind */
-.blind{
+.blind {
     /* 
     실제로 브라우저 상에 노출되는 텍스트는 아니지만 이미지를 대체하는 대체 텍스트처럼
     노출되면 안되지만 리더기에서 영역을 알려줘야 할 때 사용하는 방법
@@ -69,35 +76,44 @@ body, html{
     height: 1px;
     /* 포토샵의 마스크 기능과 비슷 */
     clip: rect(1px, 1px, 1px, 1px);
-    overflow: hidden; /* 넘치는 영역을 모두 숨김 */
+    overflow: hidden;
+    /* 넘치는 영역을 모두 숨김 */
     z-index: -1;
 }
+
 /* header */
-.h-container{
+.h-container {
     width: 100%;
 }
-.h-top{
+
+.h-top {
     padding: 12px 0;
     border-bottom: 1px solid gray;
 }
-.h-top-menu{
+
+.h-top-menu {
     float: right;
-    font-size: 0; /*inline 요소의 개행 여백을 없애기 위해*/
+    font-size: 0;
+    /*inline 요소의 개행 여백을 없애기 위해*/
 }
-.h-top-menu a{
+
+.h-top-menu a {
     font-size: 12px;
     color: #999999;
     margin-left: 20px;
 }
+
 /* a태그 첫 번째 요소의 margin 없애기 */
-.h-top-menu a:first-of-type{
+.h-top-menu a:first-of-type {
     margin-left: 0;
 }
-.h-bottom{
+
+.h-bottom {
     width: 100%;
     height: 96px;
 }
-.logo{
+
+.logo {
     width: 245px;
     height: 64px;
     position: absolute;
@@ -105,23 +121,28 @@ body, html{
     left: 0;
     transform: translateY(-50%);
 }
-.logo a{
+
+.logo a {
     display: block;
 }
-.gnb{
+
+.gnb {
     height: 100%;
     position: absolute;
     top: 0;
     right: 70px;
 }
-.gnb ul{
+
+.gnb ul {
     height: 100%;
 }
-.gnb ul li{
+
+.gnb ul li {
     float: left;
     height: 100%;
 }
-.gnb ul li a{
+
+.gnb ul li a {
     width: 100%;
     height: 100%;
     display: block;
@@ -130,7 +151,8 @@ body, html{
     color: #333333;
     font-weight: bold;
 }
-.menu-btn{
+
+.menu-btn {
     width: 35px;
     height: 26px;
     position: absolute;
@@ -138,7 +160,8 @@ body, html{
     right: 0;
     transform: translateY(-50%);
 }
-.menu-btn i{
+
+.menu-btn i {
     display: block;
     width: 100%;
     height: 3px;
@@ -147,34 +170,42 @@ body, html{
     left: 0;
     border-radius: 3px;
 }
-.line1{
+
+.line1 {
     top: 0px;
 }
-.line2{
+
+.line2 {
     top: 12px;
 }
-.line3{
+
+.line3 {
     top: 24px;
 }
+
 /* main */
-.container{
+.container {
     padding-bottom: 46px;
 }
-.visual-wrapper{
+
+.visual-wrapper {
     width: 100%;
     height: 615px;
-    background: url(../images/visual02.jpg) no-repeat center / cover; /*상위폴더에 가서 image폴더를 가야함*/
+    background: url(../images/visual02.jpg) no-repeat center / cover;
+    /*상위폴더에 가서 image폴더를 가야함*/
     position: relative;
     top: 0;
     left: 0;
 }
-.visual-dot-list{
+
+.visual-dot-list {
     position: absolute;
     left: 50%;
     bottom: 60px;
     transform: translateX(-50%);
 }
-.visual-dot-list ul li{
+
+.visual-dot-list ul li {
     width: 14px;
     height: 14px;
     border: 1px solid #029BAB;
@@ -183,29 +214,35 @@ body, html{
     margin-right: 30px;
     float: left;
 }
-.visual-dot-list ul li:first-of-type{
+
+.visual-dot-list ul li:first-of-type {
     background-color: #029BAB;
 }
+
 /* timeline */
-.timeline-wrapper{
+.timeline-wrapper {
     width: 100%;
 }
-.timeline{
+
+.timeline {
     width: 100%;
     height: 110px;
     background: #029BAB url(../images/timeline.png) no-repeat center top;
 }
-.timeline-list{
+
+.timeline-list {
     width: 100%;
     height: 100%;
 }
-.timeline-list li{
+
+.timeline-list li {
     width: 100px;
     height: 100%;
     text-align: center;
     float: left;
 }
-.timeline-list li:before{
+
+.timeline-list li:before {
     content: "";
     display: block;
     width: 6px;
@@ -214,20 +251,25 @@ body, html{
     background-color: #ffffff;
     margin: 34px auto 0;
 }
-.timeline-list li.green:before{
+
+.timeline-list li.green:before {
     background-color: #7BDADC;
 }
-.timeline-list li.on:before{
+
+.timeline-list li.on:before {
     background-color: #F0B801;
 }
-.timeline-list li a{
-    font-size: 20px; /*폰트 사이즈 짝수로 하면 깔끔하게 나*/
+
+.timeline-list li a {
+    font-size: 20px;
+    /*폰트 사이즈 짝수로 하면 깔끔하게 나*/
     font-weight: bold;
     display: block;
     padding-top: 30px;
     box-sizing: border-box;
 }
-.timeline-list li a:after{
+
+.timeline-list li a:after {
     content: "";
     display: block;
     width: 0px;
@@ -236,31 +278,38 @@ body, html{
     margin: 5px auto 0;
     transition: 0.3s
 }
-.timeline-list li a:hover{
+
+.timeline-list li a:hover {
     color: #F0B801;
 }
-.timeline-list li a:hover:after{
+
+.timeline-list li a:hover:after {
     width: 100%;
 }
+
 /* itemeline-item */
-.timeline-item{
+.timeline-item {
     padding-top: 2px;
 }
-.timeline-item ul{
+
+.timeline-item ul {
     width: 100%;
     border: 1px solid #dddddd;
     padding: 16px 20px;
 }
-.timeline-item ul li{
+
+.timeline-item ul li {
     float: left;
     margin-right: 100px;
 }
-.time-date{
+
+.time-date {
     color: #029BAB;
     margin-bottom: 12px;
     font-weight: bold;
 }
-.time-date:before{
+
+.time-date:before {
     content: "";
     display: block;
     width: 5px;
@@ -269,35 +318,42 @@ body, html{
     background-color: #029BAB;
     margin-right: 10px;
 }
-.time-title{
+
+.time-title {
     color: #556864;
     font-weight: bold;
     font-size: 14px;
 }
+
 /* curri */
-.curri-wrapper{
-    padding: 60px 0 140px; /*padding에는 auto가 없다*/
+.curri-wrapper {
+    padding: 60px 0 140px;
+    /*padding에는 auto가 없다*/
 }
-.content-title{
+
+.content-title {
     text-align: center;
     font-size: 30px;
     color: #029BAB;
     font-weight: bold;
     margin-bottom: 30px;
 }
-.curri-wrapper .inner > div{
+
+.curri-wrapper .inner>div {
     float: left;
     position: relative;
     left: 0;
     top: 0;
 }
-.curri-item01{
+
+.curri-item01 {
     width: 588px;
     height: 640px;
-    background:url(../images/curri01.jpg) no-repeat center center / cover;
+    background: url(../images/curri01.jpg) no-repeat center center / cover;
     margin-right: 24px;
 }
-.hover-box{
+
+.hover-box {
     width: 100%;
     height: 100%;
     /*opacity로 배경을 흐리게 하면 컨텐츠 내용도 영향을 미쳐 배경만 흐리게 하려면 rgba로 주는게 좋다*/
@@ -311,7 +367,8 @@ body, html{
     transition: 0.5s;
     opacity: 0;
 }
-.hover-box:after{
+
+.hover-box:after {
     content: "";
     display: block;
     width: 90%;
@@ -320,25 +377,31 @@ body, html{
     top: 5%;
     left: 5%;
     border: 1px solid rgba(255, 255, 255, 0.7);
-    
+
 }
-.curri-wrapper .inner > div:hover .hover-box{
+
+.curri-wrapper .inner>div:hover .hover-box {
     opacity: 1;
- }
- .curri-title{
-    font-size:18px;
+}
+
+.curri-title {
+    font-size: 18px;
     color: #ffffff;
     margin-bottom: 40px;
-    display: inline-block; /* 내가 가진 컨텐츠 내용의 길이 만큼만 border 라인 생기게끔*/
+    display: inline-block;
+    /* 내가 가진 컨텐츠 내용의 길이 만큼만 border 라인 생기게끔*/
     border-bottom: 2px solid #ffffff;
     padding-bottom: 20px;
-    line-height: 24px; /*행간의 크기는 폰트 사이즈의 1.5~1.7배 정도가 좋다고 한다*/
- }
- .curri-text{
+    line-height: 24px;
+    /*행간의 크기는 폰트 사이즈의 1.5~1.7배 정도가 좋다고 한다*/
+}
+
+.curri-text {
     color: #ffffff;
     margin-bottom: 50px;
- }
- .curri-text span{
+}
+
+.curri-text span {
     display: block;
     width: 230px;
     height: 24px;
@@ -347,8 +410,9 @@ body, html{
     font-weight: bold;
     line-height: 24px;
     margin: 0 auto 10px;
- }
- .link-btn{
+}
+
+.link-btn {
     display: inline-block;
     padding: 14px 20px;
     border-radius: 20px;
@@ -356,36 +420,42 @@ body, html{
     background-color: #ffffff;
     font-size: 12px;
     font-weight: bold;
- }
- .curri-item02{
+}
+
+.curri-item02 {
     width: 588px;
     height: 310px;
     background: url(../images/curri02.jpg) no-repeat center center / cover;
     margin-bottom: 24px;
- }
- .curri-item03{
+}
+
+.curri-item03 {
     width: 282px;
     height: 307px;
     background: url(../images/curri03.jpg) no-repeat center center / cover;
     margin-right: 24px;
- }
- .curri-item04{
+}
+
+.curri-item04 {
     width: 282px;
     height: 307px;
     background: url(../images/curri04.jpg) no-repeat center center / cover;
- }
- /* info-wrapper */
- .info-wrapper{
+}
+
+/* info-wrapper */
+.info-wrapper {
     width: 100%;
     margin-bottom: 140px;
     background: url(../images/background.png) no-repeat center center;
     text-align: center;
- }
- .info-list{
+}
+
+.info-list {
     width: 100%;
     margin-bottom: 50px;
- }
- .info-list li{
+}
+
+.info-list li {
     width: 282px;
     height: 402px;
     float: left;
@@ -400,8 +470,9 @@ body, html{
     padding: 40px 0 0 30px;
     box-sizing: border-box;
     text-align: left;
- }
- .info-list li:after{
+}
+
+.info-list li:after {
     content: "";
     display: block;
     width: 100%;
@@ -412,73 +483,89 @@ body, html{
     background-color: rgba(0, 0, 0, 0.3);
     opacity: 0;
     transition: 0.3s;
- }
- .info-list li:last-of-type{
+}
+
+.info-list li:last-of-type {
     margin-right: 0;
- }
- .info-list li:nth-of-type(odd){
-    margin-top: 34px; 
+}
+
+.info-list li:nth-of-type(odd) {
+    margin-top: 34px;
     /* transform: translateY(34px); */
- }
- /* 글씨가 희미하게 보이는 것을 선명하게 보이게 하려고 안의 내용 z-index로 올리기 */
- .info-list li > *{
+}
+
+/* 글씨가 희미하게 보이는 것을 선명하게 보이게 하려고 안의 내용 z-index로 올리기 */
+.info-list li>* {
     position: relative;
     z-index: 1;
- }
- .seoul{
+}
+
+.seoul {
     background: url(../images/seoul.jpg);
- }
- .incheon{
+}
+
+.incheon {
     background: url(../images/incheon.jpg);
- }
- .busan{
+}
+
+.busan {
     background: url(../images/busan.jpg);
- }
- .jeju{
-    background:url(../images/jeju.jpg);
- }
- .info-title{
+}
+
+.jeju {
+    background: url(../images/jeju.jpg);
+}
+
+.info-title {
     color: #ffffff;
     margin-bottom: 40px;
     font-weight: bold;
     font-size: 20px;
- }
- .info-title span{
+}
+
+.info-title span {
     display: block;
     margin-bottom: 16px;
     line-height: 24px;
     font-size: 18px;
     font-weight: normal;
- }
- .link-text{
+}
+
+.link-text {
     color: #ffffff;
     font-weight: bold;
     font-size: 20px;
     border-bottom: 1px solid #ffffff;
     display: none;
- }
- .info-list li:hover:after{
+}
+
+.info-list li:hover:after {
     opacity: 1;
- }
- .info-list li:hover .link-text{
+}
+
+.info-list li:hover .link-text {
     display: inline;
- }
- .info-wrapper .link-btn{
+}
+
+.info-wrapper .link-btn {
     border: 1px solid #029BAB;
     padding: 12px 40px;
- }
- .book-wrapper{
+}
+
+.book-wrapper {
     width: 100%;
     background-color: #029BAB;
-    padding: 24px 0; 
- }
- .book-wrapper .content-title{
+    padding: 24px 0;
+}
+
+.book-wrapper .content-title {
     color: #ffffff;
     position: relative;
     top: 0;
     left: 0;
- }
- .book-wrapper .content-title:after{
+}
+
+.book-wrapper .content-title:after {
     content: "";
     display: block;
     width: 100%;
@@ -488,10 +575,308 @@ body, html{
     top: 50%;
     left: 0;
     transform: translateY(-50%);
- }
- .book-wrapper .content-title span{
+}
+
+.book-wrapper .content-title span {
     padding: 0 30px;
     background-color: #029BAB;
     position: relative;
     z-index: 1;
- }
+}
+
+.book-list {
+    width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.book-list li {
+    float: left;
+    width: 237px;
+    margin-right: 70px;
+}
+
+.book-list li:last-of-type {
+    margin-right: 0px;
+}
+
+.book-list li .book-title {
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.book-item {
+    width: 100%;
+    height: 326px;
+    position: relative;
+    top: 0;
+    left: 0;
+    background: url(../images/book01.jpg) no-repeat center center;
+    margin-bottom: 24px;
+}
+
+.book-list li:nth-of-type(2) .book-item {
+    background-image: url(../images/book02.jpg);
+}
+
+.book-list li:nth-of-type(3) .book-item {
+    background-image: url(../images/book03.jpg);
+}
+
+.book-list li:nth-of-type(4) .book-item {
+    background-image: url(../images/book04.jpg);
+}
+
+.hover-item {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding-top: 60px;
+    box-sizing: border-box;
+    opacity: 0;
+    transition: 0.5s;
+    visibility: hidden;
+}
+
+.hover-item strong {
+    color: #F0B801;
+    font-size: 18px;
+}
+
+.hover-item .text {
+    margin: 24px 0;
+    color: #ffffff;
+    line-height: 20px;
+}
+
+.hover-item .text:after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 2px;
+    background-color: rgba(255, 255, 255, 0.7);
+    margin: 30px auto 0;
+}
+
+.hover-item .name {
+    color: #ffffff;
+    margin-bottom: 6px;
+}
+
+.hover-item .price {
+    color: #ffffff;
+    margin-bottom: 36px;
+}
+
+.book-list li:hover .hover-item {
+    opacity: 1;
+    visibility: visible;
+}
+
+.book-list li:hover .link-text {
+    display: inline;
+}
+
+.book-wrapper button {
+    width: 60px;
+    height: 80px;
+    background: url(../images/arrow_left.png) no-repeat center center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+}
+
+.book-wrapper .prev-btn {
+    left: -80px;
+}
+
+.book-wrapper .next-btn {
+    right: -80px;
+    background: url(../images/arrow_right.png);
+}
+
+/* partner */
+.partner-wrapper {
+    padding: 140px 0;
+}
+
+.partner-left {
+    float: left;
+}
+
+.partner-left .content-title {
+    font-size: 28px;
+    font-weight: bold;
+    text-align: text;
+    margin-bottom: 24px;
+}
+
+.partner-list {
+    margin-bottom: 50px;
+}
+
+.partner-list li {
+    margin-bottom: 18px;
+}
+
+.partner-list li:last-of-type {
+    margin-bottom: 0;
+}
+
+.partner-list li a {
+    color: #029BAB;
+    font-size: 20px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.partner-list li:hover a {
+    color: #F0B801;
+}
+
+.btn-wrapper button {
+    border: none;
+    width: 30px;
+    height: 14px;
+    background: url(../images/arrow_left_13.png) no-repeat center center;
+}
+
+.btn-wrapper .next-btn {
+    background-image: url(../images/arrow_right_13.png);
+}
+
+.btn-wrapper .bar {
+    content: "";
+    width: 1px;
+    height: 10px;
+    margin: 0 12px;
+    background: rgba(0, 0, 0, 0.7);
+    display: inline-block;
+    /* vertical-align: inline / table 요소 수직 정렬 속성
+    블럭 요소에는 적용되지 않는다
+    기본값: baseline
+    middle: 수직 중앙으로 기준(콘텐츠 영역의 높이/2)의 부모 요소에 정렬
+    top: 인라인 박스 상단에 정렬
+    bottom: 인라인 박스 하단에 정렬
+    sub: 요소를 박스 안에서 아래 첨자를 기준으로 정렬
+    super: 요소를 박스 안에서 위 첨자를 기준으로 정렬
+    */
+    vertical-align: sub;
+}
+
+.partner-right {
+    float: right;
+}
+
+/* banner */
+.banner-wrapper {
+    width: 100%;
+    height: 275px;
+    margin-bottom: 48px;
+    background: url(../images/adv.png) no-repeat center center;
+}
+
+/* footer */
+.f-top {
+    border-top: 1px solid #dddddd;
+    border-bottom: 1px solid #dddddd;
+    padding: 16px 0;
+}
+
+.f-top ul {
+    float: right;
+    /* 
+    position: absolute 를 이용해 컨텐츠를 정렬할 경우 
+    float의 clearfix기법과 같이 자식 요소의 영역을 부모가 받아오게 할 수는 없다
+    position일 경우에는 강제적으로 영역값을 넣어주어야 한다
+    */
+}
+
+.f-top li {
+    display: inline-block;
+    /* float: left; */
+    margin-right: 36px;
+}
+
+.f-top li:last-of-type {
+    margin-right: 0;
+}
+
+.f-top li a {
+    color: gray;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* f-bottom */
+.f-bottom {
+    padding: 30px 0 50px;
+}
+
+.f-bottom .inner {
+    background: url(../images/footer_logo.png) no-repeat left center;
+    text-align: right;
+    color: gray;
+    font-size: 15px;
+}
+
+.sns-list {
+    display: inline-block;
+    margin-bottom: 36px;
+}
+
+.sns-list li {
+    float: left;
+    margin-left: 20px;
+    width: 46px;
+    height: 44px;
+}
+
+.sns-list li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: url(../images/icon_facebook.png) no-repeat center center / 100%;
+}
+
+.sns-list li:nth-of-type(2) a {
+    background: url(../images/icon_youtube.png);
+}
+
+.sns-list li:nth-of-type(3) a {
+    background: url(../images/icon_blog.png);
+}
+
+.f-info {
+    line-height: 30px;
+    margin-bottom: 20px;
+}
+
+.f-info span::after {
+    content: "";
+    width: 1px;
+    height: 12px;
+    background-color: #666666;
+    display: inline-block;
+    margin: 0 8px;
+}
+
+.f-info span:nth-of-type(2):after,
+.f-info span:last-of-type:after {
+    display: none;
+}
+
+.copy {
+    background: url(../images/footer_img.png) no-repeat right center;
+    /* 
+    height: 38px;
+    line-height: 38px;
+    padding-right: 50px; 
+    */
+    padding: 14px 50px 10px 0;
+}
