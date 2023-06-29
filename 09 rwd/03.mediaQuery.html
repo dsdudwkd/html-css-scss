@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+        미디어쿼리(분기점, 브레이크포인트): 반응형에서 필수적으로 사용하는 속성으로 반응형에서 레이아웃의 달라지는 지점을 잡아주는 css 속성
+        분기점은 시안에 따라서 잡는 것이 보통이며 크게 모바일, 태블릿, pc로 구분지어서 넣지만 디자인에 따라서 중간에 분기점을 추가하는 경우도 있다
+        보통 미디어쿼리는 마지막에 작성
+
+        쿼리 작성 방식
+        데스크탑 퍼스트: max-width
+        기본값은 데스크탑 우선 적용이며 분기점은 위에서 아래로 내려간다(데스트탑 태블릿 모바일 순으로)
+
+        모바일 퍼스트 = min-width
+        기본값은 모바일 우선 적용이며 분기점은 아래에서 위로 올라간다(모바일 태블릿 데스크탑 순으로)
+
+        */
+
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .parent{
+            padding: 12px;
+            width: 1200px;
+            margin: 0 auto;
+            background-color: pink;
+            overflow: hidden;
+            box-sizing: border-box;
+        }
+        .parent > div{
+            width: 30%;
+            height: 200px;
+            background-color: brown;
+            float: left;
+            margin-right: 5%;
+        }
+        .parent > .child3{
+            margin-right: 0px;
+        }
+        @media screen and (max-width:1200px){
+            .parent{
+                width: 100%;
+            }
+        }
+        @media screen and (max-width:768px){
+            .parent > div{
+                width: 45%;
+                margin-right: 10%;
+            }
+            .parent > .child2{
+                margin-right: 0;
+            }
+            .parent > .child3{
+                width: 100%;
+                margin-top: 30px;
+            }
+        }
+        @media screen  and (max-width:510px) {
+            .parent > div{
+                width: 100%;
+                margin-right: 0;
+                margin-bottom: 30px;
+            }
+            .parent > .child3{
+                margin-top: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="parent">
+        <div class="child1">child1</div>
+        <div class="child2">child2</div>
+        <div class="child3">child3</div>
+    </div>
+</body>
+
+</html>

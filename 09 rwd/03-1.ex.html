@@ -1,0 +1,80 @@
+1 <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 모바일 퍼스트로 작성하기 */
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .parent{
+            padding: 12px;
+            width: 100%;
+            margin: 0 auto;
+            background-color: pink;
+            box-sizing: border-box;
+            overflow: hidden;
+            max-width: 1200px;
+        }
+        .parent > div{
+            width: 100%;
+            height: 200px;
+            background-color: brown;
+            margin-bottom: 30px;
+            float: left;
+        }
+        .parent > .child3{
+            margin: 0px;
+        }
+        @media screen and (min-width: 510px){
+            .parent{
+                overflow: hidden;
+            }
+            .parent > div{
+                width: 45%;
+                margin-right: 10%;
+                float: left;
+            }
+            .parent > .child2{
+                margin-right:0px;
+            }
+            .parent .child3{
+                width: 100%;
+                margin-top: 30px;
+            }
+        }
+        @media screen and (min-width: 768px){
+            .parent > div{
+                width: 30%;
+                margin-right: 5%;
+                margin-bottom: 0;
+                
+            }
+            .parent > .child2{
+                margin-right: 5%;
+            }
+            .parent > .child3{
+                width: 30%;
+                margin-top: 0;
+                margin-right: 0;
+            }
+        }
+        /* @media screen and (min-width: 1200px){
+            .parent{
+                width: 1200px;
+            }
+        } */
+       
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="child1">child1</div>
+        <div class="child2">child2</div>
+        <div class="child3">child3</div>
+    </div>
+</body>
+</html>
