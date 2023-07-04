@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>columnDrop</title>
+
+    <style>
+        /* 
+        세로열 드랍
+        mostlyFluid와 비슷한 패턴 형식
+        : 화면의 크기에 비해서 컨텐츠의 가로 사이즈를 유지하며, 아래로 떨어트리는 기법을 사용하는 패턴
+        
+        mostly-fluid와 같이 많이 사용하는 패턴 중에 하나지만
+        다른 점은 세로열 드랍은 컨텐츠를 생략하지 ㅇ낳고, 아래로 떨어트리는 방시긍로만 유지한다
+
+        mostly-fluid보다는 단순한 레이아웃에 적합
+        */
+        body, html, div{
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            width: 100%;
+            max-width: 1200px;
+            padding: 10px;
+            box-sizing: border-box;
+            background-color: lightgrey;
+            margin: 0 auto;
+        }
+        .content1{
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            overflow: hidden;
+            background-color: lightcyan;
+            margin-bottom: 20px;
+        }
+        .content1 > div{
+            float: left;
+            width: 100%;
+            height: 200px;
+        }
+        .content1 .content1-1{
+            background-color: bisque;
+        }
+        .content1 .content1-2{
+            background-color: lightseagreen;
+        }
+        .content1 .content1-3{
+            background-color: lightsalmon;
+        }
+        .content2{
+            width: 100%;
+            height: 150px;
+            background-color: lightpink;
+        }
+
+        @media screen and (min-width:768px){
+            .content1 .content1-1{
+                width: 30%;
+            }
+            .content1 .content1-2{
+                width: 70%;
+            }
+            .content1 .content1-3{
+                width: 100%;
+            }
+        }
+        @media screen and (min-width:1200px){
+            .content1 .content1-1, 
+            .content1 .content1-2, 
+            .content1 .content1-3{
+                width: 33.3333%;
+                height: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="content1">
+            <div class="content1-1">content1-1</div>
+            <div class="content1-2">content1-2</div>
+            <div class="content1-3">content1-3</div>
+        </div>
+        <div class="content2">
+            content2
+        </div>
+    </div>
+</body>
+</html>

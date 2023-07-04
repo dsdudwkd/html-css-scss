@@ -45,7 +45,7 @@
             background-color: green;
         }
         p:focus{
-            background-color:bule;
+            background-color:blue;
         }
         ul li:nth-child(4){
             color: lightseagreen;
@@ -72,22 +72,22 @@
         }
 
         /* 
-        특정한 순번을 찾응 선택자
+        특정한 순번을 찾는 선택자
         nth:child(n) : n은 순번을 의미
         특정 숫자가 아닌 짝수와 홀수로 구분하여 지정할 수도 있다
         odd: 홀수, even: 짝수
 
         숫자 뒤에 n이 붙게 되면 숫자의 배수를 선택한다
 
-        nth-child(n)의 가장 큰 특징은 태그와 선택자와 관계없이 부모요소에서 해당하는 순번만 만족
+        nth-child(n)의 가장 큰 특징은 태그와 선택자와 관계없이 부모 요소에서 시작해 해당하는 순번만 만족
         nth-of-type(n)은 부모 요소를 기준으로 자식 요소인 선택자 태그 중에서만 순번을 찾는다.(type과 순번 모두 만족)
         */
 
         p:nth-child(2){
-            background-color: orange;
+            background-color: orange; /* 전체 태그 중에서 2번째인 태그가 p태그 인 것 */
         }
         p:nth-of-type(2){
-            background-color: purple;
+            background-color: purple; /* p태그 중에서 2번째 */
         }
     </style>
 </head>

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>layoutShifter</title>
+    <style>
+        /* 
+        layoutShifter
+        분기점이 가장 많은 패턴으로서 디바이스에서 반응을 가장 빠르게 한다(= 분기점의 갯수가 많으므로)
+        단순한 컨텐츠를 아래로 떨어트리기 보다는 컨텐츠의 이동이 다른 패턴보다 자유롭고
+        레이아웃의 변화가 가장 심하다
+
+        레이아웃을 포함하여 컨텐츠 내부에서도 분기점을 따로 두는 경우가 있다
+        컨텐츠의 관리가 다른 패턴에 비해 어려우며 난이도가 가장 높다
+        */
+        body, html, div, header, main, section, footer{
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 12px;
+            background-color: lightgray;
+            box-sizing: border-box;
+            overflow: hidden;
+        }
+        .header{
+            width: 100%;
+            height: 100px;
+            background-color: #ffffff;
+            margin-bottom: 12px;
+        }
+        .content{
+            width: 100%;
+            background-color: #ffffff;
+            margin-bottom: 12px;
+            overflow: hidden;
+        }
+        .content1{
+            width: 30%;
+            height: 300px;
+            margin-right: 1%;
+            float: left;
+            background-color: gray;
+        }
+        .content2{
+            width: 69%;
+            float: left;
+            background-color: grey;
+            box-sizing: border-box;
+            margin-bottom: 10px;
+        }
+        .content2 > div{
+            width: 49%;
+            height: 145px;
+            float:left;
+            background-color: lightpink;
+        }
+        .content2 .content2-1{
+            margin-right: 2%;
+        }
+        .content3{
+            width: 69%;
+            float: left;
+            background-color: aquamarine;
+        }
+        .content3 > div{
+            width: 49%;
+            height: 145px;
+            float:left;
+            background-color: blanchedalmond;
+        }
+        .content3 .content3-1{
+            margin-right: 2%;
+        }
+        .content4{
+            width: 100%;
+            height: 300px;
+            float: left;
+            margin: 10px 0;
+            background-color: lightcoral;
+        }
+        .content5{
+            width: 100%;
+            background-color: lightseagreen;
+            float: left;
+        }
+        .content5 > div{
+            height: 300px;
+            float: left;
+            background-color: lightskyblue;
+        }
+        .content5 .content5-1{
+            width: 79%;
+            margin-right: 1%;
+        }
+        .content5 .content5-2{
+            width: 20%;
+        }
+        .footer{
+            width: 100%;
+            height: 150px;
+            background-color: #ffffff;
+        }
+        @media screen and (max-width:1024px){
+            .content2 > div{
+                height: 300px;
+            }
+            .content3{
+                width: 100%;
+            }
+        }
+        @media screen and (max-width:768px){
+            .content1{
+                width: 49%;
+                margin-right: 2%;
+            }
+            .content2{
+                width: 49%;
+            }
+            .content2 > div{
+                width: 100%;
+                height: 145px;
+            }
+            .content2 .content2-1{
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
+            .content3 > div{
+                width: 100%;
+                height: 200px;
+            }
+            .content3 .content3-1{
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
+            .content5 .content5-1,
+            .content5 .content5-2{
+                width: 100%;
+                height: 150px;
+            }
+            .content5 .content5-1{
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
+        }
+        @media screen and (max-width:480px){
+            .content1,
+            .content2{
+                width: 100%;
+            }
+            .content1{
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">header</header>
+        <main class="content">
+            <section class="content1">content1</section>
+            <section class="content2">
+                <div class="content2-1">content2-1</div>
+                <div class="content2-2">content2-2</div>
+            </section>
+            <section class="content3">
+                <div class="content3-1">content3-1</div>
+                <div class="content3-2">content3-2</div>
+            </section>
+            <section class="content4">content4</section>
+            <section class="content5">
+                
+                <div class="content5-1">content5-1</div>
+                <div class="content5-2">content5-2</div>
+            </section>
+        </main>
+        <footer class="footer">footer</footer>
+    </div>
+    
+</body>
+</html>
