@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="reset.css">
+    <style>
+        .container{
+            display: flex;
+        }
+        /* 
+        flex
+        basis grow shrink의 그룹 속성
+        basis: auto, grow:0, shrink: 1px;
+        
+        순서는 grow shrink basis 순으로 작성된다(순서 주의)
+
+        grow를 제외한 나머지 속성은 생략이 가능하다
+        그룹 속성에서 값이 생략될 경우 shrink는 1로 되지만
+        basis는 기본값이 auto에서 0으로 바뀐다
+
+        두 번째 값에 단위가 없는 경우 shrink로 인식한다
+        단위가 있는 경우 shrink는 생략되며, basis로 적용된다
+        */
+        .item{
+            flex: 1 200;
+            flex: 1 200px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">Lorem.</div>
+        <div class="item">Lorem, ipsum.</div>
+        <div class="item">Lorem, ipsum dolor.</div>
+    </div>
+    
+</body>
+</html>
