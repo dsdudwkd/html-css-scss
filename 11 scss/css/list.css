@@ -1,0 +1,17 @@
+@charset "UTF-8";
+/*
+list
+여러 개의 값을 하나의 변수에 나열해서 담는 방법
+
+문법
+$변수명: 값1, 값2, 값3, ...
+$변수명: (값1, 값2, 값3, ...) => map은 무조건 키와 값이 있어야 하고 list는 값만 있다
+$변수명: 값1 값2 값3
+*/
+body {
+  background: 3;
+  background: 3;
+  background: apple;
+  background: apple, melon, lemon;
+  background: 20px normal "roboto", 30px regular "verdana", 40px bold "돋움";
+}

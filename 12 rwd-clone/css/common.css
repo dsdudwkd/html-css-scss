@@ -1,0 +1,224 @@
+@charset "UTF-8";
+/*
+@import
+외부에 있는 다른 SCSS 파일을 연결하는 구문
+scss는 컴포넌트 방식으로 여러 개의 파일을 나누기 때문에 통합하는 과정이 필요하다
+동일한 scss 파일을 import할 때에는 확장자명을 생략해도 된다 (다른 확장자는 확장자명 기입해야 함)
+컴파일이 필요하지 않은 scss 파일은 파일명 앞에 _를 붙이면 컴파일에서 제외 대상이 된다
+*/
+/* v2.0 | 20110126
+  http://meyerweb.com/eric/tools/css/reset/ 
+  License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  /* font: inherit; */
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+/* font */
+/* color */
+@font-face {
+  font-family: "genesis-head-light";
+  src: url(../../fonts/GenesisSansHeadKRLight.eot);
+  src: url(../../fonts/GenesisSansHeadKRLight.eot#iefix) format("embededopentype"), url(../../fonts/GenesisSansHeadKRLight.woff) format("woff"), url(../../fonts/GenesisSansHeadKRLight.woff2) format("woff2");
+  font-style: normal;
+}
+@font-face {
+  font-family: "genesis-head";
+  src: url(../../fonts/GenesisSansHeadKRRegular.eot);
+  src: url(../../fonts/GenesisSansHeadKRRegular.eot#iefix) format("embededopentype"), url(../../fonts/GenesisSansHeadKRRegular.woff2) format("woff2"), url(../../fonts/GenesisSansHeadKRRegular.woff) format("woff");
+  font-style: normal;
+}
+@font-face {
+  font-family: "genesis-text";
+  src: url(../../fonts/GenesisSansTextKRRegular.eot);
+  src: url(../../fonts/GenesisSansTextKRRegular.eot#iefix) format("embededopentype"), url(../../fonts/GenesisSansTextKRRegular.woff2) format("woff2"), url(../../fonts/GenesisSansTextKRRegular.woff) format("woff");
+  font-style: normal;
+}
+/*
+content
+선언된 mixin안에서 새로운 스타일을 적용할 때 사용하는 기법
+기존 mixin이 가지고 있는 스타일 외에 선택자나 속성 등을 추가하여 사용할 때 
+*/
+.inner {
+  width: auto;
+  height: 100%;
+  padding: 0px 140px;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.blind {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  clip: rect(1px, 1px, 1px, 1px);
+  overflow: hidden;
+  z-index: -1;
+  border: none;
+}
+
+body,
+html {
+  font-size: 14px;
+  font-family: "genusis-text", sans-serif;
+  background-color: #111111;
+}
+
+.skip-menu li a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 1px;
+  font-size: 0px;
+  line-height: 0px;
+  color: #ffffff;
+  background-color: #111111;
+  font-weight: bold;
+  text-align: center;
+}
+
+.skip-menu li a:focus {
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  font-size: 24px;
+}
+
+.laptop2,
+.tablet,
+.mobile {
+  display: none;
+}
+
+@media (min-width: 1024px) and (max-width: 1360px) {
+  .laptop {
+    display: none;
+  }
+  .laptop2 {
+    display: block;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .laptop2,
+  .laptop,
+  .pc {
+    display: none;
+  }
+  .tablet {
+    display: block;
+  }
+}
+.h-container {
+  width: 100%;
+  height: 70px;
+}
+.h-container .inner {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 128px;
+  margin-right: 60px;
+}
+
+.gnb {
+  height: 100%;
+}
+.gnb .gnb-list {
+  display: flex;
+  gap: 60px;
+  height: 100%;
+}
+.gnb .gnb-list li a {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  color: rgba(255, 255, 255, 0.7);
+  transition: 0.3s;
+}
+.gnb .gnb-list li a:hover {
+  color: rgb(255, 255, 255);
+}
+
+/* gnb */
+.support-menu {
+  margin-left: auto;
+  display: flex;
+  height: 100%;
+  gap: 30px;
+}
+.support-menu a {
+  color: rgba(255, 255, 255, 0.7);
+  transform: 0.3s;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+.support-menu a:hover {
+  color: rgb(255, 255, 255);
+}
+.support-menu .search-btn {
+  height: 100%;
+  width: 17px;
+  display: block;
+  background: url(../../images/icon-search-small.png) no-repeat center center/17px;
+  margin-top: 28px;
+}

@@ -1,0 +1,28 @@
+/*
+maxWidth 안에서 grid 형태에 따라서 분할 작업하도록 function으로 분할 영역 지정
+*/
+
+$maxWidth:1200px;
+
+@function grid($item:1, $all:12){
+    @return $maxWidth * ($item/$all)
+}
+
+.container{
+    width: $maxWidth;
+    margin: 0 auto;
+    padding: 12px;
+    background-color: gray;
+    .content1{
+        width: grid(12);
+        height: 300px;
+        margin-bottom: 10px;
+        background-color: pink;
+    }
+    .content2{
+        width: grid(6);
+        height: 200px;
+        margin-bottom: 10px;
+        background-color: violet;
+    }
+}
