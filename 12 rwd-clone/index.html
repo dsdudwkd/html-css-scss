@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./css/common.css">
+    <!-- boxicons 사이트에서 이미지를 폰트처럼 사용할 수 있음 -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
     <ul class="skip-menu">
@@ -33,19 +35,69 @@
 
             <div class="support-menu">
                 <a href="#" class="sup-link">
-                    <span class="text laptop">고객센터</span>
-                    <img class="laptop2" src="/12 rwd-clone/images/icon-custom-center.png" alt="고객센터" class="tablet">
+                    <span class="text">고객센터</span>
+                    <img src="./images/icon-custom-center.png" alt="고객센터">
                 </a>
                 <a href="#" class="my-link">
-                    <span class="text laptop">마이페이지</span>
-                    <img class="laptop2 tablet" src="/12 rwd-clone/images/genesis-kr-gnb-mypage-icon-01-tablet-34x38-ko.png" alt="마이페이지">
+                    <span class="text">마이페이지</span>
+                    <img class="tablet" src="./images/genesis-kr-gnb-mypage-icon-01-tablet-34x38-ko.png" alt="마이페이지">
                 </a>
-                <a href="#" class="search-btn tablet">
+                <a href="#" class="search-btn">
                     <span class="blind">검색하기 버튼</span>
-                    <img src="/12 rwd-clone/images/icon-search.png" alt="검색하기 버튼">
+                    <img src="./images/icon-search-small.png"> <!-- blind로 검색하기 버튼 작성해놔서 alt 생략 가능 -->
                 </a>
             </div>
+
+            <a href="#" class="mobile-btn">
+                <div>
+                    <i class="line1"></i>
+                    <i class="line2"></i>
+                    <span class="전체메뉴버튼"></span>
+                </div>
+            </a>
         </div>
     </header>
+
+    <main class="container">
+        <section class="visual-wrapper">
+            <div class="visual-item">
+                <img src="./images/main-visual01.jpg" alt="g90(pc)" class="pc">
+                <img src="./images/visual01-mobile.jpg" alt="g90(mobile)" class="mobile">
+                <div class="visual-text">
+                    <div class="title-box">
+                        <p class="sub-text">GENESIS</p>
+                        <h2 class="title">G90</h2>
+                        <p class="sub-text">2023년형 출시</p>
+                    </div>
+
+                    <div class="link-box">
+                        <a href="#" title="페이지 바로가기"><span>더 알아보기</span></a>
+                        <a href="#" title="페이지 바로가기"><span>견적내기</span></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="visual-controls">
+                <ul class="dot-list">
+                    <li class="on"></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+                <button class="pause-btn">
+                    <i class='bx bx-play'>
+                        <span class="blind">슬라이드 자동 시작 버튼</span>
+                    </i>
+                    <i class='bx bx-pause' >
+                        <span class="blind">슬라이드 자동 일시정지 버튼</span>
+                    </i>
+                </button>
+            </div>
+        </section>
+    </main>
 </body>
 </html>

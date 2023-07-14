@@ -34,18 +34,18 @@ content
 기존 mixin이 가지고 있는 스타일 외에 선택자나 속성 등을 추가하여 사용할 때 
 */
 @mixin laptop{ //분기점만 사용하려고
-    @media (min-width: $laptop2) and (max-width: $laptop) {
+    @media (max-width: $laptop) {
         @content;
     }
 } // 1680px과 1360 사이
 @mixin laptop2{
-    @media (min-width: $tablet) and (max-width: $laptop2) {
+    @media (max-width: $laptop2) {
         @content;
 
     }
 } //1360와 1024 사이
 @mixin tablet{
-    @media (min-width: $mobile) and (max-width: $tablet) {
+    @media(max-width: $tablet) {
         @content;
     }
 } //1024와 768사이

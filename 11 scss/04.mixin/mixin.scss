@@ -72,7 +72,7 @@
     @include circle(50px, 50%);
 }
 
-//6. 말 줄임표
+//5-1. 말 줄임표
 @mixin ellipsis($lineHeight:16px, $line:1){
     overflow: hidden;
     text-overflow: ellipsis;

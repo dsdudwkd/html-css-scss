@@ -16,7 +16,7 @@ $family: 'roboto', 'verdana', '돋움';
 body{
     //index: list 안에 있는 특정 값의 순번을 호출(순번은 1부터 시작)
     background: index($listItem, lemon);
-    //length: list 안에 잇는 값의 갯수를 호출
+    //length: list 안에 있는 값의 갯수를 호출
     background: length($list: $listItem);
     //nth: list 안에 있는 특정 순번에 있는 값을 호출 (index의 반대)
     background: nth($list: $listItem, $n:1 );

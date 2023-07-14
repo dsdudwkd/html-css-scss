@@ -45,29 +45,24 @@ html {
     font-size: 24px;
 }
 
-.laptop2,
-.tablet,
 .mobile {
     display: none;
 }
 
-@include laptop2{
-    .laptop{
-        display: none;
+@include laptop{
+    .inner{
+        padding: 0 100px;
     }
-    .laptop2{
-        display: block;
+}
+@include laptop2{
+    .inner{
+        padding: 0 75px;
     }
 }
 
 @include tablet {
-   .laptop2,
-   .laptop,
-   .pc {
-    display: none;
-   }
-   .tablet{
-    display: block;
+   .inner{
+        padding: 0 20px;
    }
 }
 @include mobile {
