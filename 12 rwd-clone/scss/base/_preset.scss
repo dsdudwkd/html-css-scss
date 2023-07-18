@@ -48,6 +48,41 @@ html {
 .mobile {
     display: none;
 }
+.dic-btn{
+    width: 100%;
+    height: 56px;
+    border: 1px solid $whiteColor;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $whiteColor;
+    box-sizing: border-box;
+    position: relative;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+    z-index: 1;
+    &:after{
+        content: "";
+        width: 0;
+        height: 100%;
+        background-color: $whiteColor;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: width 0.5s 0s, opacity 0.5s 0s;
+        z-index: -1;
+        opacity: 0;
+        }
+    &:hover:after{
+        width: 100%;
+        opacity: 1;
+        transition: width 0.5s 0s, opacity 0s;
+    }
+    &:hover{
+        color: #151515;
+    }
+}
 
 @include laptop{
     .inner{
@@ -66,5 +101,10 @@ html {
    }
 }
 @include mobile {
-   
+   .pc{
+    display: none;
+   }
+   .mobile{
+    display: block;
+   }
 }
