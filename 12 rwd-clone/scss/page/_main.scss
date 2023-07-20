@@ -383,6 +383,152 @@
             }
         }
     }
+} /* icon-wrapper */
+
+.award-wrapper{
+    padding-bottom: 250px;
+    .title-box{
+        padding-left: 336px;
+        margin-bottom: 80px;
+        .title{
+            color: $whiteColor;
+            font-size: 42px;
+            font-weight: 100;
+            font-weight: $titleLight;
+        }
+    }
+    .award-item{
+        position: relative;
+        top: 0;
+        left: 0;
+        .award-dot{
+            position: absolute;
+            top: 0;
+            left:0px;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: end;
+            flex-direction: column;
+            .award-dot-list{
+                padding-left: 336px;
+                padding-right: 140px;
+                display: flex;
+                li{
+                    border-top: 2px solid rgba(255,255,255,0.7);
+                    padding: 15px 0;
+                    width: calc(100% / 6);
+                    a{
+                        display: block;
+                        color: rgba(255, 255, 255, 0.7);
+                        transition: 0.5s;
+                        width: 80%;
+                        line-height: 1.5;
+                        /*
+                        text-transform: 글자 변형 속성(영문 속성)
+                        - capitalize: 첫 글자만 대문자
+                        - lowercase: 전체 소문자
+                        - uppercase: 전체 대문자
+                        */
+                        text-transform: uppercase;
+                    }
+                }
+            }
+            .pause-btn{
+                width: 54px;
+                height: 54px;
+                background: url(../../images/ico-pause-default.png) no-repeat center center / 54px;
+                position: absolute;
+                bottom: 0;
+                right: 70px;
+                border: 1px solid rgba(255, 255, 255, 0.5);
+                border-radius: 100%;
+                cursor: pointer;
+            }
+        }
+        .text-box{
+            width: 520px;
+            position: absolute;
+            left: 0;
+            bottom: 130px;
+            padding-left: 336px;
+            .content-title{
+                font-size: 42px;
+                color: $whiteColor;
+                line-height: 1.5;
+                font-weight: 100;
+                font-family: $titleLight;
+                margin-bottom: 24px;
+                /*
+                word-break: 영역보다 글이 길어서 줄바꿈 될 때 속성 (아시아권 언어 줄바꿈)
+                - normal: 기본값
+                - break-all: 문자를 강제적으로 줄바꿈
+                - keep-all: 문자 간격 사이에서만 줄바꿈
+
+                word-wrap: 영어권에서의 언어 속성
+                */
+                word-break: keep-all;
+                span{
+                    font-size: 30px;
+                    display: block;
+                }
+            }
+            .text{
+                color: $whiteColor;
+                font-size: 16px;
+                line-height: 1.7; //1.2 ~ 1.8로 설정하는 것이 가독성에 좋다
+            }
+        }
+
+    }
+}
+.option-wrapper{
+    padding-bottom: 230px;
+    .opt-list{
+        display: flex;
+        gap: 40px;
+        .opt-item{
+            position:relative;
+            top: 0;
+            left: 0;
+            background: url(../../images/space.jpg) no-repeat center center / cover;
+            padding-top: 27.6%; // 높이영역 / laptop의 너비
+            flex-grow: 1;
+            &:after{
+                content: "";
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                background-color: rgba(0, 0, 0 , 0.5);
+            }
+            .text-box{
+                position: absolute;
+                top: 0;
+                left: 0;
+                padding: 60px;
+                width: 500px;
+                z-index: 2;
+                .title{
+                    color: $whiteColor;
+                    font-size: 42px;
+                    font-weight: 100;
+                    font-family: $titleLight;
+                }
+                .text{
+                    color: $whiteColor;
+                    font-size: 16px;
+                    line-height: 1.8;
+                    margin: 24px 0;
+                    word-break: keep-all;
+                }
+            }
+        }
+        .trip{
+            background: url(../../images/roadtrip.jpg)
+        }
+    }
 }
 
 
@@ -448,6 +594,56 @@
                     li{
                         width: 6px;
                         height: 6px;
+                    }
+                }
+            }
+        }
+    }
+    .award-wrapper{
+        .title-box{
+            padding-left: 240px;
+            margin-bottom: 60px;
+            .title{
+                font-size: 36px;
+            }
+        }
+        .award-item{
+            .award-dot{
+                .award-dot-list{
+                    padding-left: 240px;
+                    padding-right: 100px;
+                }
+                .pause-btn{
+                    right: 30px;
+                }
+            }
+            .text-box{
+                width: 350px;
+                padding-left: 240px;
+                .content-title{
+                    font-size: 34px;
+                    span{
+                        font-size: 30px;
+                    }
+                }
+                .text{
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+    .option-wrapper{
+        padding-bottom: 210px;
+        .opt-list{
+            .opt-item{
+                .text-box{
+                    padding: 40px;
+                    .title{
+                        font-size: 26px;
+                    }
+                    .text{
+                        font-size: 14px;
+                        margin: 16px 0;
                     }
                 }
             }
@@ -526,6 +722,58 @@
             }
         }
     }
+    .award-wrapper{
+        .title-box{
+            padding-left:220px;
+            margin-bottom: 40px;
+            .title{
+                font-size: 26px;
+            }
+        }
+        .award-item{
+            .award-dot{
+                .award-dot-list{
+                    padding-left: 220px;
+                    padding-right: 75px;
+                    li{
+                        a{
+                            font-size: 12px;
+                        }
+                    }
+                }
+            }
+            .text-box{
+                padding-left: 220px;
+                width: 270px;
+                .content-title{
+                    font-size: 21px;
+                    margin-bottom: 10px;
+                }
+                .text{
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+    .option-wrapper{
+        padding-bottom: 180px;
+        .opt-list{
+            gap: 20px;
+            .opt-item{
+                .text-box{
+                    padding: 30px;
+                    width: 430px;
+                    .title{
+                        font-size: 20px;
+                    }
+                    .text{
+                        font-size: 12px;
+                        margin: 12px 0;
+                    }
+                }
+            }
+        }
+    }
 }
 
 @include tablet {
@@ -546,7 +794,29 @@
         }
     }
     .models-wrapper{
-        padding: 160px 0 0 40px; 
+        padding: 160px 0 220px 40px; 
+    }
+    .award-wrapper{
+        .title-box{
+            padding-left: 100px;
+        }
+        .award-item{
+            .award-dot{
+                position: static;
+                .award-dot-list{
+                    padding-left: 0;
+                    padding-right: 20px;
+                    margin-top: 30px;
+                }
+                .pause-btn{
+                    bottom: 120px;
+                }
+            }
+            .text-box{
+                padding-left: 100px;
+                width: 300px;
+            }
+        }
     }
     
 }
@@ -610,6 +880,81 @@
                 }
             }
         }
+    }
+    .icon-wrapper{
+        .inner{
+            padding: 0;
+        }
+        padding: 0;
+        padding-bottom: 100px;
+        .icon-list{
+            flex-direction: column;
+            gap: 0;
+            li{
+                width: 100%;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+                padding-left: 30px;
+                box-sizing: border-box;
+
+                a{
+                    align-items: center;
+                    flex-direction: row;
+                    justify-content: start;
+                    padding: 45px 0;
+
+                    img{
+                        width: 30px;
+                    }
+                }
+                &:nth-last-of-type(){
+                    border-bottom: 0;
+                }
+            }
+        }
+    }
+    .award-wrapper{
+        padding-bottom: 140px;
+        .title-box{
+            padding-left: 30px;
+            .title{
+                font-size: 30px;
+            }
+        }
+        .award-item{
+            .award-dot{
+                .award-dot-list{
+                    padding: 0 30px;
+                    overflow: hidden;
+                    li{
+                        width: 77%;
+                        flex-shrink: 0;
+                        &:first-of-type{
+                            border-top-color: rgba(255,255,255,1);
+                        }
+                        a{
+                            font-size: 14px;
+                        }
+                    }
+                }
+                .pause-btn{
+                    display: none;
+                }
+            }
+            .text-box{
+                position: static;
+                width: 100%;
+                padding: 0 30px;
+                box-sizing: border-box;
+                margin-top: 40px;
+                .content-title{
+                    font-size: 32px;
+                }
+                .text{
+                    font-size: 16px;
+                }
+            }
+        }
+        
     }
     
 }

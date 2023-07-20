@@ -84,6 +84,46 @@ html {
     }
 }
 
+.link-btn-v2{
+    color: $whiteColor;
+    font-size: 16px;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    span{
+        position: relative;
+        top: 0;
+        left: 0;
+        &:before{
+            content: "";
+            width: 100%;
+            height: 1px;
+            background-color: $whiteColor;
+            display: block;
+            position: absolute;
+            left: 0;
+            bottom: -5px;
+        }
+        &:after{
+            content: "";
+            width: 0;
+            height: 1px;
+            background-color: $whiteColor;
+            display: block;
+            position: absolute;
+            left: 0;
+            bottom: -5px;
+            transition: 0.4s;
+        }
+    }
+    &:hover span:before{
+        display: none;
+    }
+    &:hover span:after{
+        width: 100%;
+    }
+}
+
 @include laptop{
     .inner{
         padding: 0 100px;
