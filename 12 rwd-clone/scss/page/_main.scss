@@ -985,6 +985,21 @@
 
         }
     }
+    .more-wrapper{
+            .more-list{
+                li{
+                    .text-box{
+                        .title{
+                            font-size:16px;
+                        }
+                        .text,
+                        .link-btn-v2 span{
+                            font-size:14px;
+                        }
+                    }
+                }
+            }
+    }
 }
 
 @include laptop2 {
@@ -1183,6 +1198,14 @@
             height: 48px;
         }
     }
+    .more-wrapper{
+        padding-bottom: 80px;
+        .title-box{
+            .title{
+                font-size: 28px;
+            }
+        }
+    }
 }
 
 @include tablet {
@@ -1263,6 +1286,23 @@
                 }
                 &:first-of-type{
                     width: 100%;
+                }
+            }
+        }
+    }
+    .more-wrapper{
+        .title-box{
+            margin-bottom: 100px;
+        }
+        .more-list{
+            li{
+                .text-box{
+                    .title{
+                        font-size: 18px;
+                    }
+                    .text{
+                        font-size: 16px;
+                    }
                 }
             }
         }
@@ -1552,6 +1592,18 @@
             // width: calc(100% - 60px);
             // margin: 0 auto;
             // height: 58px;
+        }
+    }
+    .more-wrapper{
+        .title-box{
+            margin-bottom: 20px;
+        }
+        .more-list{
+            flex-direction: column;
+            gap: 70px;
+            li{
+                width: 100%;
+            }
         }
     }
 }

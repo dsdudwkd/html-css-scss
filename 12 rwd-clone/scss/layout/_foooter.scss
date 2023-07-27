@@ -1,0 +1,402 @@
+.f-container {
+    background-color: $blackColor;
+
+    .f-sns {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+        padding: 24px 0;
+
+        .inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .f-sns-left {
+                display: flex;
+                align-items: center;
+                gap: 24px;
+
+                span {
+                    color: $whiteColor;
+                    font-size: 16px;
+                }
+
+                .f-sns-list {
+                    display: flex;
+                    gap: 24px;
+
+                    a {
+                        font-size: 18px;
+                        color: rgba(255, 255, 255, 0.7);
+                        transition: 0.5s;
+                    }
+
+                    li {
+                        &:hover a {
+                            color: rgba(255, 255, 255, 1);
+                        }
+                    }
+                }
+
+                .f-sns-btn {
+                    font-size: 20px;
+                    background-color: transparent;
+                    border: none;
+                    color: $whiteColor;
+                    cursor: pointer;
+                    display: none;
+                }
+
+            }
+
+            .f-top-btn {
+                color: $whiteColor;
+                font-size: 16px;
+                display: flex;
+                align-items: center;
+                gap: 12px;
+                background-color: transparent;
+                border: none;
+                cursor: pointer;
+
+                i {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+
+    .f-notice {
+        padding: 30px 0;
+
+        .inner {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+
+            .f-notice-list {
+                width: 100%;
+
+                a {
+                    display: block;
+                    color: $whiteColor;
+                    font-size: 14px;
+                }
+            }
+
+            .f-notice-controls {
+                display: flex;
+                gap: 16px;
+
+                button {
+                    background-color: transparent;
+                    border: none;
+                    color: $whiteColor;
+                    padding: 0;
+                    font-size: 24px;
+                }
+            }
+        }
+    }
+
+    .f-sitemap {
+        background-color: #151515;
+        padding: 90px 0 90px;
+
+        .f-sitemap-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px 0;
+
+            .item {
+                width: 25%;
+                strong {
+                    font-size: 16px;
+                    color: $whiteColor;
+                    display: inline-block;
+                    margin-bottom: 20px;
+                    a{
+                        color: $whiteColor;
+                    }
+                }
+                .sitemap-btn{
+                    display: none;
+                    width: 100%;
+                    background-color: transparent;
+                    padding: 20px 30px;
+                    box-sizing: border-box;
+                    justify-content: space-between;
+                    border: none;
+                    border-top: 1px solid rgba(255, 255, 255, 0.5);
+                    color: $whiteColor;
+                    font-weight: 600;
+                    font-family: $title;
+                    align-items: center;
+                    .bx{
+                        font-size: 20px;
+                    }
+                }
+                .sub-menu {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
+                    a {
+                        display: block;
+                        font-size: 14px;
+                        color: rgba(255, 255, 255, 0.5);
+                        transition: 0.3s;
+                    }
+                    li{
+                        &:hover a{
+                            color: rgba(255, 255, 255, 1);
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+    .f-company{
+        padding: 30px 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+        .inner{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .f-cp-list{
+                display: flex;
+                align-items: center;
+                li{
+                    padding: 0 24px;
+                    position: relative;
+                    top: 0;
+                    left: 0;
+                    &:first-of-type{
+                        padding-left: 0;
+                    }
+                    &:last-of-type{
+                        padding-right: 0;
+                    }
+                    &:after{
+                        content: "";
+                        width: 1px;
+                        height: 15px;
+                        background-color: rgba(255, 255, 255, 0.7);
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                    }
+                    &:last-of-type:after{
+                        display: none;
+                    }
+                    a{
+                        font-size: 14px;
+                        color: rgba(255, 255, 255, 0.7);
+                        transition: 0.5s;
+                    }
+                    &:hover a{
+                        color: rgba(255, 255, 255, 1);
+                    }
+                }
+                .privacy{
+                    a{
+                        color: orange;
+                    }
+                    &:hover a{
+                        color: orange;
+                    }
+                }
+            }
+            .f-cp-sns{
+                display: flex;
+                gap:30px;
+                padding: 0 15px;
+                align-items: center;
+                li a{
+                    font-size: 26px;
+                    color: $whiteColor;
+                }
+            }
+        }
+    }
+    .f-genesis{
+        padding: 30px 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+        .inner{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .f-genesis-list{
+                display: flex;
+                gap: 20px 40px;
+                flex-wrap: wrap; //줄어들 때 떨어뜨리는거니까 미리줘도 됨
+                align-items: center;
+                li a{
+                    display: flex;
+                    color: rgba(255, 255, 255, 0.7);
+                    font-size: 14px;
+                    align-items: center;
+                    gap: 10px;
+                    transition: 0.5s;
+                    .bx{
+                        font-size: 16px;
+                    }
+                }
+                li:hover a{
+                    color: rgba(255, 255, 255, 1);
+                }
+            }
+            .f-lang{
+                display: flex;
+                a{
+                    display: flex;
+                    width: 80px;
+                    height: 36px;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: 14px;
+                }
+                .eng{
+                    color: $whiteColor;
+                    background-color: #222222;
+                }
+                .kor{
+                    color: #222222;
+                    background-color: $whiteColor;
+                }
+            }
+        }
+    }
+}
+
+@include laptop {
+    .f-container{
+        .f-sns {
+            .inner {
+                .f-sns-left {
+                    span {
+                        font-size: 14px;
+                    }
+                }
+    
+                .f-top-btn {
+                    font-size: 14px;
+                }
+            }
+        }
+        .f-sitemap{
+            .f-sitemap-list{
+                .item{
+                    strong{
+                        font-size: 14px;
+                    }
+                    .sub-menu{
+                        a{
+                            font-size: 12px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    
+}
+
+@include tablet {
+    .f-container {
+        .f-sns {
+            .inner {
+                .f-sns-left {
+
+                    span,
+                    .f-sns-list {
+                        display: none;
+                    }
+
+                    .f-sns-btn {
+                        display: block;
+                    }
+                }
+            }
+        }
+        .f-notice {
+            padding-top: 60px;
+
+            .inner {
+                gap: 60px;
+                flex-direction: column;
+            }
+        }
+        .f-sitemap{
+            padding: 0;
+            .inner{
+                padding: 0;
+                .f-sitemap-list{
+                    flex-direction: column;
+                    gap: 0;
+                    .item{
+                        width: 100%;
+                        strong,
+                        .sub-menu{
+                            display: none;
+                        }
+                        .sitemap-btn{
+                            display: flex;
+                        }
+                    }
+                }
+            }
+        }
+        .f-company{
+            .inner{
+                flex-direction: column;
+                gap: 20px;
+                .f-cp-list{
+                    flex-wrap: wrap;
+                    width: 230px; //애매하게 떨어지면 강제적으로 width를 줘서 떨어뜨리게 하면 된다
+                    gap: 20px 0;
+                    justify-content: center;
+                    li {
+                       padding: 0 8px; 
+                       a{
+                        font-size: 11px;
+                       }
+                    }
+                }
+            }
+        }
+        .f-genesis{
+            .inner{
+                flex-direction: column;
+                gap: 45px;
+                .f-genesis-list{
+                    flex-direction: column;
+                    width: 100%;
+                    gap: 0;
+                    align-items: flex-start;
+                    li{
+                        border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+                        width: 100%;
+                        padding: 30px 10px 20px;
+                        box-sizing: border-box;
+                        a{
+                            justify-content: space-between;
+                            .bx{
+                                order: 1; //flex나 grid에서 출력 순서 바꾸는
+                            }
+                        }
+                    }
+                }
+                .f-lang{
+                    width: 100%;
+                    a{
+                        width: 50%;
+                        height: 50px;
+                    }
+                }
+            }
+
+        }
+    }
+
+}
