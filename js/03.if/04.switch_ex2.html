@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>간단한 사칙연산 계산기</title>
+    <script>
+        /*
+        값1, 값2를 받아올 prompt
+        사칙 연산을 대입할 prompt
+        결과를 출력한 변수
+        */
+
+        let num1 = parseInt(prompt('첫 번째 값'));
+        let num2 = parseInt(prompt('두 번째 값'));
+        let calc = prompt('사칙연산자만 넣으세요(+, -, *, /)');
+        let result;
+
+        switch(calc){
+            case '+': result = num1 + num2;
+            break;
+
+            case '-': result = num1 - num2;
+            break;
+
+            case '*': result = num1 * num2;
+            break;
+
+            case '/': result = num1 / num2;
+            break;
+
+            default: result = '유효한 값을 입력해주세요.'
+            break;
+        };
+        document.write(result);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

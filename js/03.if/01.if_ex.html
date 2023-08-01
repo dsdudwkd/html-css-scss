@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*
+        점수 계산하기
+
+        조건1. 국어 점수와 영어점수 둘 다 90점 이상인 경우 a 학점
+        조건2. 국어 점수와 영어 점수의 합이 170점 이상이면 b 학점
+        조건3. 국어 점수와 영어 점수 둘 중 하나만 90점이면 c 학점
+        조건4. 나머지는 d 학점
+        */
+
+        let kor = prompt('국어점수');
+        let eng = prompt('영어점수');
+        kor = parseInt(kor);
+        eng = parseInt(eng);
+
+        if(kor && eng >= 90){
+            console.log('a학점');
+        } else if(kor+eng >= 170){
+            console.log('b학점');
+        } else if(kor >= 90 || eng >= 90){
+            console.log('c학점');
+            
+        } else{
+            console.log('d학점');
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

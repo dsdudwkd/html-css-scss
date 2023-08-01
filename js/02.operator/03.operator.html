@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>비교연산자</title>
+    <script>
+        /*
+        비교 연산자
+        >, <, >=, <=
+        
+        스크립트에서 사용하는 연산자: =, ==, ===
+        a = b a는 b다
+        a == b a와 b는 같다 (항등 연산자)
+        a === b a와 b는 '타입까지' 같다(완전 항등 연산자)
+
+        !, !=, !==, !===
+        결과 값들은 boolean으로만 출력함
+        */
+
+        let a = 3;
+        let b = 4;
+        let c = '4';
+        let d = 3;
+
+        console.log(a>b); //false
+        console.log(a >= d); //true
+        console.log(b==c); //true
+        console.log(b===c);//false
+
+        console.clear(); //위의 출력내용 다 지우는 메서드
+        
+        console.log(!0) //true - 부정(반대값 출력)
+        console.log(a != b); //true
+        console.log(a !== b) //true
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
